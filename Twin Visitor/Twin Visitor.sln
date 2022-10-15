@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twin Visitor", "Twin Visitor.csproj", "{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BA4B73D7-4214-4326-B2EC-5A7B99FB13AE}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
