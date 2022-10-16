@@ -3,7 +3,7 @@
 [ext_resource path="res://Materials/shirt.tres" type="Material" id=1]
 [ext_resource path="res://Materials/shades.tres" type="Material" id=2]
 [ext_resource path="res://Materials/skin.tres" type="Material" id=3]
-[ext_resource path="res://Scripts/Player.cs" type="Script" id=4]
+[ext_resource path="res://Scripts/PlayerB.cs" type="Script" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -17,7 +17,7 @@
 
 [sub_resource type="CylinderShape" id=6]
 
-[node name="Player" type="KinematicBody"]
+[node name="PlayerB" type="KinematicBody"]
 collision_layer = 2
 script = ExtResource( 4 )
 
