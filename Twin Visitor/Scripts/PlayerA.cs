@@ -26,12 +26,15 @@ public class PlayerA : KinematicBody
 	private Vector3 velocity;
 	private float y_velocity;
 	private Spatial camera_pivot;
+	public CollisionShape interact_collider;
 	
 	public override void _Ready() 
 	{
 		camera_pivot = GetNode<Spatial>("CameraPivot");
 		camera = GetNode<Camera>("CameraPivot/CameraBoom/Camera");
+		interact_collider = GetNode<CollisionShape>("Interact/InteractHitBox");
 
+		interact_collider.SetDisabled(true);
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 
@@ -41,6 +44,7 @@ public class PlayerA : KinematicBody
 		{
 			Input.MouseMode = Input.MouseModeEnum.Visible;
 		}
+		interact_collider.SetDisabled(true);
 	}
 
 	public override void _Input(InputEvent @event)
@@ -59,6 +63,13 @@ public class PlayerA : KinematicBody
 				rotDeg.x = Mathf.Clamp(rotDeg.x, min_pitch, max_pitch);
 				camera_pivot.RotationDegrees = rotDeg;
 			}
+		}
+		// Checks if the interaction button has just been pressed on this frame
+		// and then fires off the block code once
+		if (Input.IsActionJustPressed("Interact"))
+		{
+			// Hitbox in front of the player becomes active
+			interact_collider.SetDisabled(false);
 		}
 	}
 

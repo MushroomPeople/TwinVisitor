@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Materials/shirt.tres" type="Material" id=1]
 [ext_resource path="res://Materials/shades.tres" type="Material" id=2]
 [ext_resource path="res://Materials/skin.tres" type="Material" id=3]
 [ext_resource path="res://Scripts/PlayerA.cs" type="Script" id=4]
+[ext_resource path="res://Materials/transparent.tres" type="Material" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -16,6 +17,10 @@
 [sub_resource type="SphereShape" id=5]
 
 [sub_resource type="CylinderShape" id=6]
+
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="CubeMesh" id=8]
 
 [node name="PlayerA" type="KinematicBody"]
 collision_layer = 2
@@ -61,3 +66,15 @@ shape = SubResource( 6 )
 spring_length = 5.0
 
 [node name="Camera" type="Camera" parent="CameraPivot/CameraBoom"]
+
+[node name="Interact" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.440409, -1.14673 )
+collision_layer = 4
+collision_mask = 0
+
+[node name="InteractHitBox" type="CollisionShape" parent="Interact"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Interact"]
+material_override = ExtResource( 5 )
+mesh = SubResource( 8 )
