@@ -24,7 +24,7 @@ public class DefaultItem : Area
 	{
 		// Replace with function body.
 		GD.Print("I am the item and something touched me");
-		body.GetNode<CollisionShape>("InteractHitBox").SetDisabled(true);
+		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
 	}
 }
 

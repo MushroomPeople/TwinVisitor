@@ -1,0 +1,154 @@
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.06.00_151996.log'
+Editing project: /home/vanja/school/CS458/TwinVisitor/Twin Visitor (::home::vanja::school::CS458::TwinVisitor::Twin Visitor)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.06.43_156403.log'
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+debugger-agent: Unable to listen on 22
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.08.02_156572.log'
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+I am the item and something touched me
+debugger-agent: Unable to listen on 22
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.11.17_156850.log'
+debugger-agent: Unable to listen on 22
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.27.06_158388.log'
+debugger-agent: Unable to listen on 18
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.30.06_158658.log'
+ERROR: Cannot instance script because the class 'LoadScene' could not be found. Script: 'res://Scripts/LoadScene.cs'.
+   at: can_instance (modules/mono/csharp_script.cpp:2892)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+debugger-agent: Unable to listen on 20
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.06.06_152049.log'
+Running: /home/vanja/applications/Godot_v3.5-stable_mono_x11_64/Godot_v3.5-stable_mono_x11.64 --path /home/vanja/school/CS458/TwinVisitor/Twin%20Visitor --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 152049 --position 448,240
+Running: /home/vanja/applications/Godot_v3.5-stable_mono_x11_64/Godot_v3.5-stable_mono_x11.64 --path /home/vanja/school/CS458/TwinVisitor/Twin%20Visitor --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 152049 --position 448,240
+Running: /home/vanja/applications/Godot_v3.5-stable_mono_x11_64/Godot_v3.5-stable_mono_x11.64 --path /home/vanja/school/CS458/TwinVisitor/Twin%20Visitor --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 152049 --position 448,240
+Running: /home/vanja/applications/Godot_v3.5-stable_mono_x11_64/Godot_v3.5-stable_mono_x11.64 --path /home/vanja/school/CS458/TwinVisitor/Twin%20Visitor --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 152049 --position 448,240
+Running: /home/vanja/applications/Godot_v3.5-stable_mono_x11_64/Godot_v3.5-stable_mono_x11.64 --path /home/vanja/school/CS458/TwinVisitor/Twin%20Visitor --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 152049 --position 448,240
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.32.21_158869.log'
+Editing project: /home/vanja/school/CS458/TwinVisitor/Twin Visitor (::home::vanja::school::CS458::TwinVisitor::Twin Visitor)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.34.31_159200.log'
+ERROR: Cannot instance script because the class 'LoadScene' could not be found. Script: 'res://Scripts/LoadScene.cs'.
+   at: can_instance (modules/mono/csharp_script.cpp:2892)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+ERROR: Error calling method from signal 'body_entered': 'Area(LoadScene.cs)::_on_Item_body_entered': Method not found..
+   at: emit_signal (core/object.cpp:1242)
+debugger-agent: Unable to listen on 22
+ERROR: Cannot open file 'res://Prefabs/SceneChange.tscn'.
+   at: load_interactive (scene/resources/resource_format_text.cpp:1183)
+ERROR: Failed loading resource: res://Prefabs/SceneChange.tscn. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Method failed. Returning: err
+   at: pack (scene/resources/packed_scene.cpp:831)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.37.36_159487.log'
+Load new scene
+debugger-agent: Unable to listen on 22
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+ERROR: An EditorPlugin build callback failed.
+   at: call_build (editor/editor_node.cpp:5532)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-46-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-10-24_09.49.01_160841.log'
+Load new scene
+debugger-agent: Unable to listen on 18

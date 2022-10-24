@@ -34,7 +34,7 @@ public class PlayerA : KinematicBody
 		camera = GetNode<Camera>("CameraPivot/CameraBoom/Camera");
 		interact_collider = GetNode<CollisionShape>("Interact/InteractHitBox");
 
-		interact_collider.SetDisabled(true);
+		interact_collider.Disabled = true;
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 
@@ -44,7 +44,7 @@ public class PlayerA : KinematicBody
 		{
 			Input.MouseMode = Input.MouseModeEnum.Visible;
 		}
-		interact_collider.SetDisabled(true);
+		interact_collider.Disabled = true;
 	}
 
 	public override void _Input(InputEvent @event)
@@ -69,7 +69,7 @@ public class PlayerA : KinematicBody
 		if (Input.IsActionJustPressed("Interact"))
 		{
 			// Hitbox in front of the player becomes active
-			interact_collider.SetDisabled(false);
+			interact_collider.Disabled = false;
 		}
 	}
 

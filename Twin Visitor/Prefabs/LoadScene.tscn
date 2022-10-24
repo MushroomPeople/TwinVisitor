@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/LoadScene.cs" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=5]
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="SphereShape" id=4]
+
+[node name="LoadScene" type="Area"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+material_override = SubResource( 5 )
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]
