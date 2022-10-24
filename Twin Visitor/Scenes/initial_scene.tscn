@@ -1,17 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/SwitchPlayer.cs" type="Script" id=1]
 [ext_resource path="res://Materials/gray.tres" type="Material" id=2]
-[ext_resource path="res://Prefabs/PlayerA.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/PlayerB.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/DefaultItem.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
 
-[node name="MyScene2" type="Spatial"]
-script = ExtResource( 1 )
+[node name="InitialScene" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, -1, 0 )
@@ -22,16 +19,24 @@ mesh = SubResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 2 )
 
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73697, 0.832631, 6.97151 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+material_override = ExtResource( 2 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 2 )
+
 [node name="StaticBody3" type="StaticBody" parent="."]
-transform = Transform( 3.5652, 0, 0, 0, 1, 0, 0, 0, 3.5652, -0.017211, 0.832631, 1.37943 )
+transform = Transform( 3.5652, 0, 0, 0, 1, 0, 0, 0, 3.5652, -4.81268, 0.832631, 1.37943 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.5 )
 material_override = ExtResource( 2 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -0.5 )
 shape = SubResource( 2 )
 
 [node name="StaticBody4" type="StaticBody" parent="."]
@@ -42,13 +47,11 @@ material_override = ExtResource( 2 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 2 )
 
-[node name="PlayerA" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 7.48133 )
+[node name="Item" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43339, -6.22512 )
 
-[node name="PlayerB" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82776, 0.5, 7.72679 )
-
-[node name="SceneChange" parent="." instance=ExtResource( 4 )]
+[node name="LoadScene" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.5, -1 )
+sceneToLoad = "res://Scenes/load_scene_test.tscn"
