@@ -42,4 +42,4 @@ shape = SubResource( 2 )
 
 [node name="SceneChange" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.5, -2.5 )
-sceneToLoad = "res://Scenes/load_scene_test.tscn"
+sceneToLoad = "res://Scenes/initial_scene.tscn"

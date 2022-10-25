@@ -17,12 +17,10 @@ public class LoadScene : Area
 	{
 		// Replace with function body.
 		GD.Print("Load new scene");
-		var root = GetTree().GetRoot();
-		//var currentScene = root.GetChild(root.GetChildCount() - 1);
-		//currentScene.QueueFree();
 		var scene = GD.Load<PackedScene>(sceneToLoad);
 		var instance = scene.Instance();
-		root.AddChild(instance);
+		GetTree().Root.AddChild(instance);
+		GetParent().QueueFree();
 		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
 	}
 }
