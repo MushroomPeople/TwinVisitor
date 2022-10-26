@@ -5,28 +5,28 @@ using System;
 public class DialogBox : Control
 {
 	[Export]
-	string[] dialogue = {"Hey, this is the default dialogue.",
+	public string[] dialogue = {"Hey, this is the default dialogue.",
 						  "This shouldn't be in the final game. If you see this, make note of where you found it.",
 						  "Thank you!"};
-	bool finished = false;
-	int dialogueIndex = 0;
+	public bool finished = false;
+	public int dialogueIndex = 0;
 	private RichTextLabel text;
 
 	public override void _Ready()
 	{
-		text = GetNode<RichTextLabel>("RichTextLabel");
-		LoadDialogue();
+		text = GetNode<RichTextLabel>("DialogText");
+		//LoadDialogue();
 	}
 
 	public override void _Process(float delta)
 	{
-		if (Input.IsActionJustPressed("Interact") && finished == false)
-		{
-			LoadDialogue();
-		}
+		//if (Input.IsActionJustPressed("Interact"))
+		//{
+		//	
+		//}
 	}
 	
-	private void LoadDialogue()
+	public void AdvanceDialogue()
 	{
 		if (dialogueIndex < dialogue.Length)
 		{
