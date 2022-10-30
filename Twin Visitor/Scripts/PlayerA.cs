@@ -27,6 +27,7 @@ public class PlayerA : KinematicBody
 	private float y_velocity;
 	private Spatial camera_pivot;
 	public CollisionShape interact_collider;
+	private PlayerB playerB;
 	
 	public override void _Ready() 
 	{
@@ -36,6 +37,8 @@ public class PlayerA : KinematicBody
 
 		interact_collider.Disabled = true;
 		Input.MouseMode = Input.MouseModeEnum.Captured;
+		
+		playerB = GetNode<PlayerB>("/root/GameControl/PlayerB");
 	}
 
 	public override void _Process(float delta)
@@ -63,51 +66,66 @@ public class PlayerA : KinematicBody
 				rotDeg.x = Mathf.Clamp(rotDeg.x, min_pitch, max_pitch);
 				camera_pivot.RotationDegrees = rotDeg;
 			}
-		}
-		// Checks if the interaction button has just been pressed on this frame
-		// and then fires off the block code once
-		if (Input.IsActionJustPressed("Interact"))
-		{
-			// Hitbox in front of the player becomes active
-			interact_collider.Disabled = false;
+			// Checks if the interaction button has just been pressed on this frame
+			// and then fires off the block code once
+			if (Input.IsActionJustPressed("Interact"))
+			{
+				// Hitbox in front of the player becomes active
+				interact_collider.Disabled = false;
+			}
 		}
 	}
 
-	public override void _PhysicsProcess(float delta)
+		public override void _PhysicsProcess(float delta)
 	{
 		base._PhysicsProcess(delta);
-		handle_movement(delta);
+		Vector3 direction = new Vector3(Vector3.Zero);
+		if (active)
+			direction = GetDirection(delta);
+		else
+		{
+			LookAt(playerB.GlobalTransform.origin, Vector3.Up);
+			float dist = playerB.GlobalTransform.origin.DistanceSquaredTo(GlobalTransform.origin);
+			if (dist > 25f)
+			{
+				direction -= Transform.basis.z;
+				direction = direction.Normalized();
+			}
+		}
+		HandleMovement(delta, direction);
 	}
-
-	private async void handle_movement(float delta)
+	
+	private Vector3 GetDirection(float delta)
 	{
 		Vector3 direction = new Vector3(Vector3.Zero);
+		
+		if (Input.IsActionPressed("MoveForward"))
+			direction -= Transform.basis.z;
+		if (Input.IsActionPressed("MoveBack"))
+			direction += Transform.basis.z;
+		if (Input.IsActionPressed("MoveLeft"))
+			direction -= Transform.basis.x;
+		if (Input.IsActionPressed("MoveRight"))
+			direction += Transform.basis.x;
+			
+		direction = direction.Normalized();
+		return direction;
+	}
 
-		if (active)
-		{
-			if (Input.IsActionPressed("MoveForward"))
-				direction -= Transform.basis.z;
-			if (Input.IsActionPressed("MoveBack"))
-				direction += Transform.basis.z;
-			if (Input.IsActionPressed("MoveLeft"))
-				direction -= Transform.basis.x;
-			if (Input.IsActionPressed("MoveRight"))
-				direction += Transform.basis.x;
+	private async void HandleMovement(float delta, Vector3 direction)
+	{
+		float accel = IsOnFloor() ? acceleration : air_acceleration;
+		velocity = velocity.LinearInterpolate(direction * speed, accel * delta);
 
-			direction = direction.Normalized();
+		if (IsOnFloor())
+			y_velocity = -0.01f;
+		else
+			y_velocity = Mathf.Clamp(y_velocity - gravity, -max_terminal_velocity, max_terminal_velocity);
+		
+		if (Input.IsActionJustPressed("Jump") && IsOnFloor())
+			y_velocity = jump_power;
 
-			float accel = IsOnFloor() ? acceleration : air_acceleration;
-			velocity = velocity.LinearInterpolate(direction * speed, accel * delta);
-
-			if (IsOnFloor())
-				y_velocity = -0.01f;
-			else
-				y_velocity = Mathf.Clamp(y_velocity - gravity, -max_terminal_velocity, max_terminal_velocity);
-			if (Input.IsActionJustPressed("Jump") && IsOnFloor())
-				y_velocity = jump_power;
-
-			velocity.y = y_velocity;
-			velocity = MoveAndSlide(velocity, Vector3.Up);
-		}
+		velocity.y = y_velocity;
+		velocity = MoveAndSlide(velocity, Vector3.Up);
 	}
 }

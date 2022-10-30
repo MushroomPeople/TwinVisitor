@@ -15,15 +15,6 @@ public class DialogBox : Control
 	public override void _Ready()
 	{
 		text = GetNode<RichTextLabel>("DialogText");
-		//LoadDialogue();
-	}
-
-	public override void _Process(float delta)
-	{
-		//if (Input.IsActionJustPressed("Interact"))
-		//{
-		//	
-		//}
 	}
 	
 	public void AdvanceDialogue()
