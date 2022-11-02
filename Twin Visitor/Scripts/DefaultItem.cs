@@ -11,4 +11,3 @@ public class DefaultItem : Area
 		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
 	}
 }
-

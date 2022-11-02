@@ -24,20 +24,4 @@ public class GameControl : Node
 			playerB.camera.Current = playerB.active;
 		}
 	}
-	
-	public override void _Process(float delta)
-	{
-		//if (playerA.active)
-		//{
-			//GD.Print("testing");
-			//playerB.RotationDegrees = Vector3.Up * Mathf.LerpAngle(playerB.Rotation.y, Mathf.Atan2(playerA.Translation.x - playerB.Translation.x, playerA.Translation.z - playerB.Translation.z), 1f);
-		//	float dist = playerB.GlobalTransform.origin.DistanceSquaredTo(playerA.GlobalTransform.origin);
-		//	if (dist > 16f)
-		//	{
-		//		Vector3 direction = playerB.GlobalTransform.origin.DirectionTo(playerA.GlobalTransform.origin);
-		//		float angle = playerB.GlobalTransform.basis.GetEuler().AngleTo(direction);
-		//		playerB.RotateY(angle);
-		//	}
-		//}
-	}
 }
