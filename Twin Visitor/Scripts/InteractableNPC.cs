@@ -19,12 +19,8 @@ public class InteractableNPC : Area
 		if (dialogBox.finished == false)
 		{
 			if (dialogBox.Visible == false)
-			{
 				dialogBox.Visible = true;
-				dialogBox.Call("AdvanceDialogue");
-			}
-			else
-				dialogBox.Call("AdvanceDialogue");
+			dialogBox.Call("AdvanceDialogue");
 		}
 		else
 		{

@@ -1,11 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Prefabs/DefaultItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/InteractableNPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Materials/gray.tres" type="Material" id=2]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/DialogBox.cs" type="Script" id=4]
-[ext_resource path="res://Scripts/InteractableNPC.cs" type="Script" id=5]
-[ext_resource path="res://Scenes/popuptest.tres" type="Theme" id=6]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -49,71 +46,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.5, -2.5 )
 sceneToLoad = "res://Scenes/initial_scene.tscn"
 
 [node name="InteractableNPC" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.5, 1.5 )
-script = ExtResource( 5 )
-
-[node name="DialogBox" type="PopupPanel" parent="InteractableNPC"]
-visible = true
-margin_left = 120.0
-margin_top = 420.0
-margin_right = 900.0
-margin_bottom = 540.0
-rect_min_size = Vector2( 600, 120 )
-popup_exclusive = true
-script = ExtResource( 4 )
-
-[node name="DialogText" type="RichTextLabel" parent="InteractableNPC/DialogBox"]
-anchor_left = 0.027
-anchor_top = 0.195
-anchor_right = 0.968
-anchor_bottom = 0.817
-margin_left = -17.06
-margin_top = -19.4
-margin_right = 20.96
-margin_bottom = 17.96
-bbcode_enabled = true
-
-[node name="Unused" type="Node" parent="."]
-
-[node name="TextEdit" type="TextEdit" parent="Unused"]
-visible = false
-margin_left = 124.0
-margin_top = 364.0
-margin_right = 716.0
-margin_bottom = 476.0
-theme = ExtResource( 6 )
-text = "Test.
-Testing.
-Testinging.
-This is a test.
-Does the text move?
-Does it try to display all at once?
-Can we scroll it?
-Does the interact button scroll it?"
-readonly = true
-draw_tabs = true
-draw_spaces = true
-wrap_enabled = true
-
-[node name="Dialog" type="Control" parent="Unused"]
-visible = false
-anchor_left = 0.04
-anchor_top = 0.727
-anchor_right = 0.962
-anchor_bottom = 0.935
-margin_left = 1.04
-margin_top = -3.20004
-margin_right = -0.0880737
-margin_bottom = -6.10352e-05
-script = ExtResource( 4 )
-
-[node name="DialogText" type="RichTextLabel" parent="Unused/Dialog"]
-anchor_left = 0.1
-anchor_top = 0.6
-anchor_right = 0.9
-anchor_bottom = 0.8
-margin_left = 1.7
-margin_top = -28.8
-margin_right = -32.7
-margin_bottom = 17.6
-bbcode_enabled = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 2.5 )

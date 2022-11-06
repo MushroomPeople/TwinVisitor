@@ -49,9 +49,9 @@ mesh = SubResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
 shape = SubResource( 2 )
 
-[node name="Item" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43339, -6.22512 )
-
 [node name="LoadScene" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.5, -1 )
 sceneToLoad = "res://Scenes/load_scene_test.tscn"
+
+[node name="Item" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6 )

@@ -28,7 +28,6 @@ public class PlayerB : KinematicBody
 	private Spatial camera_pivot;
 	public CollisionShape interact_collider;
 	private PlayerA playerA;
-	private string[] inventory = { "" };
 	
 	public override void _Ready() 
 	{
