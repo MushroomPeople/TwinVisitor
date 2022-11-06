@@ -13,10 +13,11 @@ public class DefaultItem : Area
 	}
 	private void _on_Item_body_entered(Node body)
 	{
-		// Replace with function body.
-		GD.Print("I am the item and something touched me");
+		// The Player interaction hitbox gets disabled
 		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
-		// Calls the AddItem script on the GameControl node
+		// Calls the AddItem script in the GameControl node
 		gc.AddItem(GetName());
+		// Removes the item from the scene
+		QueueFree();
 	}
 }

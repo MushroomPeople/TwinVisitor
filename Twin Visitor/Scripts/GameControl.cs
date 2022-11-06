@@ -32,6 +32,6 @@ public class GameControl : Node
 	public void AddItem(string itemName)
 	{
 		inventory.Add(itemName, true);
-		GD.Print(itemName);
+		GD.Print(inventory[itemName]);
 	}
 }
