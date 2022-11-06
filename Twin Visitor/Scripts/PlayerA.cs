@@ -43,10 +43,10 @@ public class PlayerA : KinematicBody
 
 	public override void _Process(float delta)
 	{
-		if (Input.IsActionJustPressed("ui_cancel"))
-		{
-			Input.MouseMode = Input.MouseModeEnum.Visible;
-		}
+		//if (Input.IsActionJustPressed("ui_cancel"))
+		//{
+		//	Input.MouseMode = Input.MouseModeEnum.Visible;
+		//}
 		interact_collider.Disabled = true;
 	}
 
@@ -76,7 +76,7 @@ public class PlayerA : KinematicBody
 		}
 	}
 
-		public override void _PhysicsProcess(float delta)
+	public override void _PhysicsProcess(float delta)
 	{
 		base._PhysicsProcess(delta);
 		Vector3 direction = new Vector3(Vector3.Zero);

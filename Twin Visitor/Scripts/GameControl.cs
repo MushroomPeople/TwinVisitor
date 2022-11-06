@@ -22,18 +22,17 @@ public class GameControl : Node
 		{
 			var temp = playerB.active;
 			playerB.active = playerA.active;
-			 playerA.active = temp;
+			playerA.active = temp;
 			playerA.camera.Current = playerA.active;
 			playerB.camera.Current = playerB.active;
 		}
-	}
-	
-	public void _on_pause_button_pressed()
-	{
-		if (GetTree().Paused == false)
-			GetTree().Paused = true;
-		else
-			GetTree().Paused = false;
+		//if (Input.IsActionPressed("Pause"))
+		//{
+		//	if (GetTree().Paused == false)
+		//		GetTree().Paused = true;
+		//	else
+		//		GetTree().Paused = false;
+		//}
 	}
 
 	// Called from DefaultItem.cs when a new item is picked up
