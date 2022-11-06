@@ -1,10 +1,13 @@
 using Godot;
 using System;
+using System.Collections.Generic; 
 
 public class GameControl : Node
 {
 	private PlayerA playerA;
 	private PlayerB playerB;
+	// Dictionary for storing Inventory data
+	public Dictionary<string, bool> inventory = new Dictionary<string, bool>();
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -23,5 +26,12 @@ public class GameControl : Node
 			playerA.camera.Current = playerA.active;
 			playerB.camera.Current = playerB.active;
 		}
+	}
+
+	// Called from DefaultItem.cs when a new item is picked up
+	public void AddItem(string itemName)
+	{
+		inventory.Add(itemName, true);
+		GD.Print(itemName);
 	}
 }
