@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Materials/gray.tres" type="Material" id=2]
-[ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/DefaultItem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Materials/gray.tres" type="Material" id=1]
+[ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/DefaultItem.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -23,7 +23,7 @@ shape = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.73697, 0.832631, 6.97151 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
@@ -33,7 +33,7 @@ shape = SubResource( 2 )
 transform = Transform( 3.5652, 0, 0, 0, 1, 0, 0, 0, 3.5652, -4.81268, 0.832631, 1.37943 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
@@ -43,15 +43,15 @@ shape = SubResource( 2 )
 transform = Transform( 3.14744, 0, 0, 0, 1.9983, 0, 0, 0, 3.65009, -6.39026, 1.30681, -0.344252 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 1 )
 mesh = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
 shape = SubResource( 2 )
 
-[node name="LoadScene" parent="." instance=ExtResource( 3 )]
+[node name="LoadScene" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.5, -1 )
-sceneToLoad = "res://Scenes/load_scene_test.tscn"
+sceneToLoad = "res://Scenes/LoadSceneTest.tscn"
 
-[node name="Item" parent="." instance=ExtResource( 4 )]
+[node name="Item" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6 )

@@ -1,13 +1,14 @@
 using Godot;
 using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 public class GameControl : Node
 {
-	private PlayerA playerA;
-	private PlayerB playerB;
+	public PlayerA playerA;
+	public PlayerB playerB;
 	// Dictionary for storing Inventory data
 	public Dictionary<string, bool> inventory = new Dictionary<string, bool>();
+	public string currentScene = "res://Scenes/InitialScene.tscn";
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -26,13 +27,6 @@ public class GameControl : Node
 			playerA.camera.Current = playerA.active;
 			playerB.camera.Current = playerB.active;
 		}
-		//if (Input.IsActionPressed("Pause"))
-		//{
-		//	if (GetTree().Paused == false)
-		//		GetTree().Paused = true;
-		//	else
-		//		GetTree().Paused = false;
-		//}
 	}
 
 	// Called from DefaultItem.cs when a new item is picked up

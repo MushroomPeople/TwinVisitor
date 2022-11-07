@@ -1,13 +1,17 @@
 using Godot;
 using System;
+using System.Linq;
+using System.Text.Json;
 
 public class PauseMenu : Control
 {
 	private bool isPaused = false;
+	private GameControl gc;
 	
 	public override void _Ready()
 	{
 		Visible = false;
+		gc = GetNode<GameControl>("/root/GameControl");
 	}
 
 	public override void _Input(InputEvent @event)
@@ -24,6 +28,43 @@ public class PauseMenu : Control
 	public void _on_ResumeButton_pressed()
 	{
 		Unpause();
+	}
+	
+	public void _on_SaveButton_pressed()
+	{
+		var gameData = new GameData(DataTools.TransformToArray(gc.playerA.GlobalTransform),
+									DataTools.TransformToArray(gc.playerB.GlobalTransform),
+									gc.playerA.active,
+									gc.playerB.active,
+									gc.inventory.Keys.ToArray(),
+									gc.currentScene);
+		Save.WriteData(gameData);
+	}
+	
+	private void _on_LoadButton_pressed()
+	{
+		var gameData = Load.GetData();
+		
+		// set player A and B transform and ensure correct player and camera is active
+		gc.playerA.GlobalTransform = DataTools.ArrayToTransform(gameData.playerATransform);
+		gc.playerB.GlobalTransform = DataTools.ArrayToTransform(gameData.playerBTransform);
+		gc.playerA.active = gameData.playerAActive;
+		gc.playerB.active = gameData.playerBActive;
+		gc.playerA.camera.Current = gc.playerA.active;
+		gc.playerB.camera.Current = gc.playerB.active;
+		
+		// set player inventory
+		for (int i = 0; i < gameData.playerInventory.Length; i++)
+		{
+			gc.AddItem(gameData.playerInventory[i]);
+		}
+		
+		// set correct scene
+		var scene = GD.Load<PackedScene>(gameData.currentScene);
+		var instance = scene.Instance();
+		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
+		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
+		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
 	}
 	
 	private void _on_QuitButton_pressed()

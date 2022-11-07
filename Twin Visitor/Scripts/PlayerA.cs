@@ -43,10 +43,6 @@ public class PlayerA : KinematicBody
 
 	public override void _Process(float delta)
 	{
-		//if (Input.IsActionJustPressed("ui_cancel"))
-		//{
-		//	Input.MouseMode = Input.MouseModeEnum.Visible;
-		//}
 		interact_collider.Disabled = true;
 	}
 

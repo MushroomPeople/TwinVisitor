@@ -1,19 +1,21 @@
 using Godot;
 using System;
 
-
 public class LoadScene : Area
 {
 	[Export]
-	string sceneToLoad = "res://load_scene_test.tscn";
+	string sceneToLoad = "res://LoadSceneTest.tscn";
 
 	private void _on_Item_body_entered(Node body)
 	{
+		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
+		
+		GetNode<GameControl>("/root/GameControl").currentScene = sceneToLoad;
+		
 		var scene = GD.Load<PackedScene>(sceneToLoad);
 		var instance = scene.Instance();
-		GetTree().Root.AddChild(instance);
-		GetParent().QueueFree();
-		body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
+		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
+		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
 	}
 }
 
