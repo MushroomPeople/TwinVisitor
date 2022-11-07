@@ -53,14 +53,17 @@ public class PlayerB : KinematicBody
 			base._Input(@event);
 			if (@event is InputEventMouseMotion motionEvent)
 			{
-				Vector3 rotDeg = RotationDegrees;
-				rotDeg.y -= motionEvent.Relative.x * mouse_sensitivity;
-				RotationDegrees = rotDeg;
+				if (gc.interacting == false)
+				{
+					Vector3 rotDeg = RotationDegrees;
+					rotDeg.y -= motionEvent.Relative.x * mouse_sensitivity;
+					RotationDegrees = rotDeg;
 
-				rotDeg = camera_pivot.RotationDegrees;
-				rotDeg.x -= motionEvent.Relative.y * mouse_sensitivity;
-				rotDeg.x = Mathf.Clamp(rotDeg.x, min_pitch, max_pitch);
-				camera_pivot.RotationDegrees = rotDeg;
+					rotDeg = camera_pivot.RotationDegrees;
+					rotDeg.x -= motionEvent.Relative.y * mouse_sensitivity;
+					rotDeg.x = Mathf.Clamp(rotDeg.x, min_pitch, max_pitch);
+					camera_pivot.RotationDegrees = rotDeg;
+				}
 			}
 			// Checks if the interaction button has just been pressed on this frame
 			// and then fires off the block code once
@@ -95,14 +98,17 @@ public class PlayerB : KinematicBody
 	{
 		Vector3 direction = new Vector3(Vector3.Zero);
 		
-		if (Input.IsActionPressed("MoveForward"))
-			direction -= Transform.basis.z;
-		if (Input.IsActionPressed("MoveBack"))
-			direction += Transform.basis.z;
-		if (Input.IsActionPressed("MoveLeft"))
-			direction -= Transform.basis.x;
-		if (Input.IsActionPressed("MoveRight"))
-			direction += Transform.basis.x;
+		if (gc.interacting == false)
+		{
+			if (Input.IsActionPressed("MoveForward"))
+				direction -= Transform.basis.z;
+			if (Input.IsActionPressed("MoveBack"))
+				direction += Transform.basis.z;
+			if (Input.IsActionPressed("MoveLeft"))
+				direction -= Transform.basis.x;
+			if (Input.IsActionPressed("MoveRight"))
+				direction += Transform.basis.x;
+		}
 			
 		direction = direction.Normalized();
 		return direction;

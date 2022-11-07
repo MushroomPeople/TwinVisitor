@@ -24,13 +24,6 @@ public class DefaultItem : Area
 		dialogBox.dialogue = new string[] {$"You got {Name}!"};
 	}
 	
-	public override void _Process(float delta)
-	{
-		if (gc.inventory.ContainsKey(Name))
-			// Removes the item from the scene
-			QueueFree();
-	}
-	
 	private void _on_Item_body_entered(Node body)
 	{
 		if (given == false)
@@ -54,7 +47,7 @@ public class DefaultItem : Area
 		else
 		{
 			dialogBox.Visible = false;
-			
+			gc.interacting = false;
 			// Removes the item from the scene
 			QueueFree();
 		}

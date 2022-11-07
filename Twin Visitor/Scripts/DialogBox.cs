@@ -11,16 +11,19 @@ public class DialogBox : Control
 	public bool finished = false;
 	public int dialogueIndex = 0;
 	private RichTextLabel text;
+	private GameControl gc;
 
 	public override void _Ready()
 	{
 		text = GetNode<RichTextLabel>("DialogText");
+		gc = GetNode<GameControl>("/root/GameControl");
 	}
 	
 	public void AdvanceDialogue()
 	{
 		if (dialogueIndex < dialogue.Length)
 		{
+			gc.interacting = true;
 			text.BbcodeText = dialogue[dialogueIndex];
 			dialogueIndex++;
 			if (dialogueIndex == dialogue.Length)
