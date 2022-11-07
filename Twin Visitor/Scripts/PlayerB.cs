@@ -28,6 +28,7 @@ public class PlayerB : KinematicBody
 	private Spatial camera_pivot;
 	public CollisionShape interact_collider;
 	private PlayerA playerA;
+	private GameControl gc;
 	
 	public override void _Ready() 
 	{
@@ -39,6 +40,7 @@ public class PlayerB : KinematicBody
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		
 		playerA = GetNode<PlayerA>("/root/GameControl/PlayerA");
+		gc = GetNode<GameControl>("/root/GameControl");
 	}
 
 	public override void _Process(float delta)
