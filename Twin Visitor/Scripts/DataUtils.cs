@@ -7,26 +7,12 @@ using System.Text.Json;
 [Serializable]
 public class GameData
 {
-//	private float[] playerATransform;
-//	private float[] playerBTransform;
-//	private bool playerAActive;
-//	private bool playerBActive;
-//	private string[] playerInventory;
-//	private string currentScene;
-	
 	public float[] playerATransform;
 	public float[] playerBTransform;
 	public bool playerAActive;
 	public bool playerBActive;
 	public string[] playerInventory;
 	public string currentScene;
-	
-//	public float[] PlayerATransform { get { return playerATransform; } set { playerATransform = value; } }
-//	public float[] PlayerBTransform { get { return playerBTransform; } set { playerBTransform = value; } }
-//	public bool PlayerAActive { get { return playerAActive; } set { playerAActive = value; } }
-//	public bool PlayerBActive { get { return playerBActive; } set { playerBActive = value; } }
-//	public string[] PlayerInventory { get { return playerInventory; } set { playerInventory = value; } }
-//	public string CurrentScene { get { return currentScene; } set { currentScene = value; } }
 	
 	// default constructor for loading
 	public GameData() {}
