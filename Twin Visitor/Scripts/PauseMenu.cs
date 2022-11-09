@@ -16,7 +16,7 @@ public class PauseMenu : Control
 
 	public override void _Input(InputEvent @event)
 	{
-		if (Input.IsActionPressed("Pause"))
+		if (Input.IsActionJustPressed("Pause"))
 		{
 			if (isPaused)
 				Unpause();
@@ -62,6 +62,7 @@ public class PauseMenu : Control
 		// set correct scene
 		var scene = GD.Load<PackedScene>(gameData.currentScene);
 		var instance = scene.Instance();
+		
 		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
 		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
 		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
