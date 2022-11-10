@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Materials/gray.tres" type="Material" id=1]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/InteractableNPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/SceneInfo.cs" type="Script" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
 
 [node name="LoadSceneTest" type="Spatial"]
+script = ExtResource( 4 )
+sceneName = "Test2"
+scenePath = "res://Scenes/LoadSceneTest.tscn"
 
 [node name="StaticBody" type="StaticBody" parent="."]
 transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, -1, 0 )

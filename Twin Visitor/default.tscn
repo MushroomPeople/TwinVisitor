@@ -10,9 +10,11 @@
 script = ExtResource( 3 )
 
 [node name="PlayerA" parent="." instance=ExtResource( 1 )]
+unique_name_in_owner = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0 )
 
 [node name="PlayerB" parent="." instance=ExtResource( 4 )]
+unique_name_in_owner = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 5 )]

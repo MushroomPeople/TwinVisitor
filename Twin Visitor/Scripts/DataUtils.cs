@@ -13,6 +13,7 @@ public class GameData
 	public bool playerBActive;
 	public string[] playerInventory;
 	public string currentScene;
+	public string currentSceneName;
 	
 	// default constructor for loading
 	public GameData() {}
@@ -23,7 +24,8 @@ public class GameData
 					bool activeA,
 					bool activeB,
 					string[] inventory,
-					string scene)
+					string scene,
+					string name)
 	{
 		playerATransform = transformA;
 		playerBTransform = transformB;
@@ -31,20 +33,21 @@ public class GameData
 		playerBActive = activeB;
 		playerInventory = inventory;
 		currentScene = scene;
+		currentSceneName = name;
 	}
 }
 
 
 public static class Save
 {
-	public static void WriteData(GameData gameData)
+	public static void WriteData(GameData gameData, string path = "user://save.sav")
 	{
 		// convert GameData to JSON string
 		var options = new JsonSerializerOptions {IncludeFields = true, WriteIndented = true};
 		string saveData = JsonSerializer.Serialize<GameData>(gameData, options);
 		// write JSON string to file
 		var saveFile = new File();
-		saveFile.Open("user://save.sav", File.ModeFlags.Write);
+		saveFile.Open(path, File.ModeFlags.Write);
 		saveFile.StoreString(saveData);
 		saveFile.Close();
 	}

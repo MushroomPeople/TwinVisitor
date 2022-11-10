@@ -9,6 +9,7 @@ public class GameControl : Node
 	// Dictionary for storing Inventory data
 	public Dictionary<string, bool> inventory = new Dictionary<string, bool>();
 	public string currentScene = "res://Scenes/InitialScene.tscn";
+	public string currentSceneName = "default";
 	public bool interacting = false;
 
 	// Called when the node enters the scene tree for the first time.

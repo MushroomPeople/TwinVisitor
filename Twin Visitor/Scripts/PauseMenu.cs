@@ -37,7 +37,8 @@ public class PauseMenu : Control
 									gc.playerA.active,
 									gc.playerB.active,
 									gc.inventory.Keys.ToArray(),
-									gc.currentScene);
+									gc.currentScene,
+									gc.currentSceneName);
 		Save.WriteData(gameData);
 	}
 	
