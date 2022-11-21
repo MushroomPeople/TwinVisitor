@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Text.Json;
 
-public class SaveMenu : Control
+public class LoadMenu : Control
 {
 	private Button file1Button;
 	private Button file2Button;
@@ -21,44 +21,33 @@ public class SaveMenu : Control
 	
 	private void _on_File1Button_pressed()
 	{
-		var gameData = new GameData(DataTools.TransformToArray(gc.playerA.GlobalTransform),
-									DataTools.TransformToArray(gc.playerB.GlobalTransform),
-									gc.playerA.active,
-									gc.playerB.active,
-									gc.inventory.Keys.ToArray(),
-									gc.currentScene,
-									gc.currentSceneName,
-									gc.playtime);
-		Save.WriteData(gameData, "file1.sav");
+		var gameData = Load.GetData("file1.sav");
+		LoadGame(gameData);
 		SetButtons();
 	}
 	
 
 	private void _on_File2Button_pressed()
 	{
-		var gameData = new GameData(DataTools.TransformToArray(gc.playerA.GlobalTransform),
-									DataTools.TransformToArray(gc.playerB.GlobalTransform),
-									gc.playerA.active,
-									gc.playerB.active,
-									gc.inventory.Keys.ToArray(),
-									gc.currentScene,
-									gc.currentSceneName,
-									gc.playtime);
-		Save.WriteData(gameData, "file2.sav");
+		var gameData = Load.GetData("file2.sav");
+		LoadGame(gameData);
 		SetButtons();
 	}
 
 
 	private void _on_File3Button_pressed()
 	{
-		var gameData = new GameData(DataTools.TransformToArray(gc.playerA.GlobalTransform),
-									DataTools.TransformToArray(gc.playerB.GlobalTransform),
-									gc.playerA.active,
-									gc.playerB.active,
-									gc.inventory.Keys.ToArray(),
-									gc.currentScene,
-									gc.currentSceneName,
-									gc.playtime);
+		var gameData = Load.GetData("file3.sav");
+		LoadGame(gameData);
+		SetButtons();
+	}
+	
+	
+	private void _on_ResetButton_pressed()
+	{
+		var gameData = new GameData();
+		Save.WriteData(gameData, "file1.sav");
+		Save.WriteData(gameData, "file2.sav");
 		Save.WriteData(gameData, "file3.sav");
 		SetButtons();
 	}
@@ -68,6 +57,33 @@ public class SaveMenu : Control
 	{
 		GetNode<PauseMenu>("/root/GameControl/PauseMenu").Visible = true;
 		Visible = false;
+	}
+	
+	
+	public void LoadGame(GameData gameData)
+	{
+		// set player A and B transform and ensure correct player and camera is active
+		gc.playerA.GlobalTransform = DataTools.ArrayToTransform(gameData.playerATransform);
+		gc.playerB.GlobalTransform = DataTools.ArrayToTransform(gameData.playerBTransform);
+		gc.playerA.active = gameData.playerAActive;
+		gc.playerB.active = gameData.playerBActive;
+		gc.playerA.camera.Current = gc.playerA.active;
+		gc.playerB.camera.Current = gc.playerB.active;
+		gc.playtime = gameData.playtime;
+		
+		// set player inventory
+		for (int i = 0; i < gameData.playerInventory.Length; i++)
+		{
+			gc.AddItem(gameData.playerInventory[i]);
+		}
+		
+		// set correct scene
+		var scene = GD.Load<PackedScene>(gameData.currentScene);
+		var instance = scene.Instance();
+		
+		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
+		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
+		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
 	}
 
 	

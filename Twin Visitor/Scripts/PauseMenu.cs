@@ -55,29 +55,32 @@ public class PauseMenu : Control
 	
 	private void _on_LoadButton_pressed()
 	{
-		var gameData = Load.GetData();
-		
-		// set player A and B transform and ensure correct player and camera is active
-		gc.playerA.GlobalTransform = DataTools.ArrayToTransform(gameData.playerATransform);
-		gc.playerB.GlobalTransform = DataTools.ArrayToTransform(gameData.playerBTransform);
-		gc.playerA.active = gameData.playerAActive;
-		gc.playerB.active = gameData.playerBActive;
-		gc.playerA.camera.Current = gc.playerA.active;
-		gc.playerB.camera.Current = gc.playerB.active;
-		
-		// set player inventory
-		for (int i = 0; i < gameData.playerInventory.Length; i++)
-		{
-			gc.AddItem(gameData.playerInventory[i]);
-		}
-		
-		// set correct scene
-		var scene = GD.Load<PackedScene>(gameData.currentScene);
-		var instance = scene.Instance();
-		
-		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
-		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
-		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
+		Visible = false;
+		GetNode<LoadMenu>("%LoadMenu").Visible = true;
+
+//		var gameData = Load.GetData();
+//		
+//		// set player A and B transform and ensure correct player and camera is active
+//		gc.playerA.GlobalTransform = DataTools.ArrayToTransform(gameData.playerATransform);
+//		gc.playerB.GlobalTransform = DataTools.ArrayToTransform(gameData.playerBTransform);
+//		gc.playerA.active = gameData.playerAActive;
+//		gc.playerB.active = gameData.playerBActive;
+//		gc.playerA.camera.Current = gc.playerA.active;
+//		gc.playerB.camera.Current = gc.playerB.active;
+//		
+//		// set player inventory
+//		for (int i = 0; i < gameData.playerInventory.Length; i++)
+//		{
+//			gc.AddItem(gameData.playerInventory[i]);
+//		}
+//		
+//		// set correct scene
+//		var scene = GD.Load<PackedScene>(gameData.currentScene);
+//		var instance = scene.Instance();
+//		
+//		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
+//		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
+//		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
 	}
 
 	
@@ -102,7 +105,7 @@ public class PauseMenu : Control
 	
 	public void Unpause()
 	{
-		if (GetNode<SaveMenu>("/root/GameControl/SaveMenu").Visible == false)
+		if (GetNode<SaveMenu>("/root/GameControl/SaveMenu").Visible == false && GetNode<LoadMenu>("/root/GameControl/LoadMenu").Visible == false)
 		{
 			// unpause game
 			isPaused = false;

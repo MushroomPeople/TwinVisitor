@@ -17,7 +17,17 @@ public class GameData
 	public float playtime;
 	
 	// default constructor for loading
-	public GameData() {}
+	public GameData()
+	{
+		playerATransform = new float[12] {1f, 0f, 0f, 0f, 1f, 0f, 0f, 0f, 1f, 4f, 0.5f, 0f};
+		playerBTransform = new float[12] {0f, 0f, 1f, 0f, 1f, 0f, -1f, 0f, 0f, 0f, 0.5f, 0f};
+		playerAActive = true;
+		playerBActive = false;
+		playerInventory = new string[0];
+		currentScene = "res://Scenes/InitialScene.tscn";
+		currentSceneName = "New Game";
+		playtime = 0f;
+	}
 	
 	// normal constructor for saving
 	public GameData(float[] transformA,
@@ -63,10 +73,10 @@ public static class Load
 	{
 		// open save file and read as JSON string
 		var saveFile = new File();
-		//if (saveFile.FileExists($"user://{filename}") == false)
-		//{
-		//	Save.WriteData(new GameData(), filename);
-		//}
+		if (saveFile.FileExists($"user://{filename}") == false)
+		{
+			Save.WriteData(new GameData(), filename);
+		}
 		saveFile.Open($"user://{filename}", File.ModeFlags.Read);
 		//saveFile.Open($"user://{filename}", File.ModeFlags.WriteRead);
 		string rawSaveData = saveFile.GetAsText();
