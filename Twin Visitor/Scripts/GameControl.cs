@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+
 public class GameControl : Node
 {
 	public PlayerA playerA;
@@ -11,6 +12,9 @@ public class GameControl : Node
 	public string currentScene = "res://Scenes/InitialScene.tscn";
 	public string currentSceneName = "default";
 	public bool interacting = false;
+	public float playtime = 0f;
+	public bool paused = false;
+
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -18,6 +22,14 @@ public class GameControl : Node
 		playerA = GetNode<PlayerA>("PlayerA");
 		playerB = GetNode<PlayerB>("PlayerB");
 	}
+	
+	
+	public override void _Process(float delta)
+	{
+		if (paused == false)
+			playtime += delta;
+	}
+	
 	
 	public override void _Input(InputEvent @event)
 	{
@@ -30,6 +42,7 @@ public class GameControl : Node
 			playerB.camera.Current = playerB.active;
 		}
 	}
+
 
 	// Called from DefaultItem.cs when a new item is picked up
 	public void AddItem(string itemName)

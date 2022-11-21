@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/PlayerA.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/InitialScene.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/GameControl.cs" type="Script" id=3]
 [ext_resource path="res://Prefabs/PlayerB.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/PauseMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/SaveMenu.tscn" type="PackedScene" id=6]
 
 [node name="GameControl" type="Spatial"]
 script = ExtResource( 3 )
@@ -17,9 +18,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0 )
 unique_name_in_owner = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 
-[node name="PauseMenu" parent="." instance=ExtResource( 5 )]
-visible = false
-
 [node name="CurrentScene" type="Spatial" parent="."]
 
 [node name="InitialScene" parent="CurrentScene" instance=ExtResource( 2 )]
+
+[node name="PauseMenu" parent="." instance=ExtResource( 5 )]
+unique_name_in_owner = true
+visible = false
+
+[node name="SaveMenu" parent="." instance=ExtResource( 6 )]
+pause_mode = 2
+unique_name_in_owner = true
+visible = false

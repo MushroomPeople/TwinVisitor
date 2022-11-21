@@ -14,6 +14,7 @@ public class GameData
 	public string[] playerInventory;
 	public string currentScene;
 	public string currentSceneName;
+	public float playtime;
 	
 	// default constructor for loading
 	public GameData() {}
@@ -25,7 +26,8 @@ public class GameData
 					bool activeB,
 					string[] inventory,
 					string scene,
-					string name)
+					string name,
+					float time)
 	{
 		playerATransform = transformA;
 		playerBTransform = transformB;
@@ -34,20 +36,21 @@ public class GameData
 		playerInventory = inventory;
 		currentScene = scene;
 		currentSceneName = name;
+		playtime = time;
 	}
 }
 
 
 public static class Save
 {
-	public static void WriteData(GameData gameData, string path = "user://save.sav")
+	public static void WriteData(GameData gameData, string filename = "save.sav")
 	{
 		// convert GameData to JSON string
 		var options = new JsonSerializerOptions {IncludeFields = true, WriteIndented = true};
 		string saveData = JsonSerializer.Serialize<GameData>(gameData, options);
 		// write JSON string to file
 		var saveFile = new File();
-		saveFile.Open(path, File.ModeFlags.Write);
+		saveFile.Open($"user://{filename}", File.ModeFlags.Write);
 		saveFile.StoreString(saveData);
 		saveFile.Close();
 	}
@@ -60,13 +63,23 @@ public static class Load
 	{
 		// open save file and read as JSON string
 		var saveFile = new File();
+		//if (saveFile.FileExists($"user://{filename}") == false)
+		//{
+		//	Save.WriteData(new GameData(), filename);
+		//}
 		saveFile.Open($"user://{filename}", File.ModeFlags.Read);
+		//saveFile.Open($"user://{filename}", File.ModeFlags.WriteRead);
 		string rawSaveData = saveFile.GetAsText();
 		saveFile.Close();
 		// convert JSON string to GameData
-		var options = new JsonSerializerOptions {IncludeFields = true, WriteIndented = true};
-		var gameData = JsonSerializer.Deserialize<GameData>(rawSaveData, options);
-		return gameData;
+		if (rawSaveData == "")
+			return new GameData();
+		else
+		{
+			var options = new JsonSerializerOptions {IncludeFields = true, WriteIndented = true};
+			var gameData = JsonSerializer.Deserialize<GameData>(rawSaveData, options);
+			return gameData;
+		}
 	}
 }
 
