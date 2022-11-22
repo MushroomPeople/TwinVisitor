@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/PawnShop.fbx-d2c0fdb71a2634082068b425a11aae11.scn"
+path="res://.import/PawnShop.fbx-efc73a0934c91eeb0105d00587e613b2.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/PawnShop.fbx"
-dest_files=[ "res://.import/PawnShop.fbx-d2c0fdb71a2634082068b425a11aae11.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/PawnShop.fbx"
+dest_files=[ "res://.import/PawnShop.fbx-efc73a0934c91eeb0105d00587e613b2.scn" ]
 
 [params]
 

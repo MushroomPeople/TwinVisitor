@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Fruite_Store_2.fbx-51469cd5f454365802e39d6fe8b987b9.scn"
+path="res://.import/Fruite_Store_2.fbx-be8ee971a3997a1645b80880221dda9a.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Fruite_Store_2.fbx"
-dest_files=[ "res://.import/Fruite_Store_2.fbx-51469cd5f454365802e39d6fe8b987b9.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Fruite_Store_2.fbx"
+dest_files=[ "res://.import/Fruite_Store_2.fbx-be8ee971a3997a1645b80880221dda9a.scn" ]
 
 [params]
 

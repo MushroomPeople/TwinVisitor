@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Dormitory_1.fbx-919409731e1873e29a6b331d22dd4196.scn"
+path="res://.import/Dormitory_1.fbx-3218e6c350a84165d52b4fe5be53349d.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Dormitory_1.fbx"
-dest_files=[ "res://.import/Dormitory_1.fbx-919409731e1873e29a6b331d22dd4196.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Dormitory_1.fbx"
+dest_files=[ "res://.import/Dormitory_1.fbx-3218e6c350a84165d52b4fe5be53349d.scn" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Road003_1K_NormalGL.jpg-db32c8b1e9cf69ec00279af0c8377a76.stex"
+path="res://.import/Road003_1K_NormalGL.jpg-a0f7faa85d2bfdf94923725f8df67d23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Road/Road003_1K_NormalGL.jpg"
-dest_files=[ "res://.import/Road003_1K_NormalGL.jpg-db32c8b1e9cf69ec00279af0c8377a76.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Road/Road003_1K_NormalGL.jpg"
+dest_files=[ "res://.import/Road003_1K_NormalGL.jpg-a0f7faa85d2bfdf94923725f8df67d23.stex" ]
 
 [params]
 

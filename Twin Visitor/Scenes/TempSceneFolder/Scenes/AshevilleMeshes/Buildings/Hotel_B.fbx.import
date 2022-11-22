@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hotel_B.fbx-d4d1e18c92a53357d8ba3b00fd497fa4.scn"
+path="res://.import/Hotel_B.fbx-fe10539a0c670147d2eddd82559af86a.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Hotel_B.fbx"
-dest_files=[ "res://.import/Hotel_B.fbx-d4d1e18c92a53357d8ba3b00fd497fa4.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Hotel_B.fbx"
+dest_files=[ "res://.import/Hotel_B.fbx-fe10539a0c670147d2eddd82559af86a.scn" ]
 
 [params]
 

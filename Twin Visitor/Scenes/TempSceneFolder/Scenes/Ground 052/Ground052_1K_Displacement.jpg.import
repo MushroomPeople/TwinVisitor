@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground052_1K_Displacement.jpg-a7dd78242b7746dc62ed7bd36c3ceb4b.stex"
+path="res://.import/Ground052_1K_Displacement.jpg-ee197e1e978428d6c3e3b53bb621ce47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground 052/Ground052_1K_Displacement.jpg"
-dest_files=[ "res://.import/Ground052_1K_Displacement.jpg-a7dd78242b7746dc62ed7bd36c3ceb4b.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Ground 052/Ground052_1K_Displacement.jpg"
+dest_files=[ "res://.import/Ground052_1K_Displacement.jpg-ee197e1e978428d6c3e3b53bb621ce47.stex" ]
 
 [params]
 

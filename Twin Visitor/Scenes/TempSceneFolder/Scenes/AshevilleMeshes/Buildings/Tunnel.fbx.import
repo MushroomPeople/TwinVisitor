@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Tunnel.fbx-8009583d167e3ae33d878aa47c73b6ad.scn"
+path="res://.import/Tunnel.fbx-0cc9b0f208faa9051bc68f52c3726667.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Tunnel.fbx"
-dest_files=[ "res://.import/Tunnel.fbx-8009583d167e3ae33d878aa47c73b6ad.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Tunnel.fbx"
+dest_files=[ "res://.import/Tunnel.fbx-0cc9b0f208faa9051bc68f52c3726667.scn" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Metal034_1K_NormalGL.jpg-8332764c0115f25e1ad05fd7cfbc6dbf.stex"
+path="res://.import/Metal034_1K_NormalGL.jpg-42fdc12b206e41555bde7b5860803496.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Glass Windows/Metal034_1K_NormalGL.jpg"
-dest_files=[ "res://.import/Metal034_1K_NormalGL.jpg-8332764c0115f25e1ad05fd7cfbc6dbf.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Glass Windows/Metal034_1K_NormalGL.jpg"
+dest_files=[ "res://.import/Metal034_1K_NormalGL.jpg-42fdc12b206e41555bde7b5860803496.stex" ]
 
 [params]
 

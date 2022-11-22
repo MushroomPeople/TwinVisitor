@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Cafe_C.fbx-e4efb2dd29e8d2a555c6d7b4679a7805.scn"
+path="res://.import/Cafe_C.fbx-aabddef76fd53b123be208e3e86a78b4.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Cafe_C.fbx"
-dest_files=[ "res://.import/Cafe_C.fbx-e4efb2dd29e8d2a555c6d7b4679a7805.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Cafe_C.fbx"
+dest_files=[ "res://.import/Cafe_C.fbx-aabddef76fd53b123be208e3e86a78b4.scn" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Metal034_1K_Displacement.jpg-fae50618f77471411b0a62782fda4472.stex"
+path="res://.import/Metal034_1K_Displacement.jpg-0b03656de37c5ea9a03c4fc18215acf8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Glass Windows/Metal034_1K_Displacement.jpg"
-dest_files=[ "res://.import/Metal034_1K_Displacement.jpg-fae50618f77471411b0a62782fda4472.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Glass Windows/Metal034_1K_Displacement.jpg"
+dest_files=[ "res://.import/Metal034_1K_Displacement.jpg-0b03656de37c5ea9a03c4fc18215acf8.stex" ]
 
 [params]
 

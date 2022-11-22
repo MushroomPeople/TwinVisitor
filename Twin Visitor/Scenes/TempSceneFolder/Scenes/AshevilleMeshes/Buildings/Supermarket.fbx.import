@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Supermarket.fbx-04e3c85115afe92164b1171a8afe2724.scn"
+path="res://.import/Supermarket.fbx-c699990a5377d98ca51d4b242f372718.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Supermarket.fbx"
-dest_files=[ "res://.import/Supermarket.fbx-04e3c85115afe92164b1171a8afe2724.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Supermarket.fbx"
+dest_files=[ "res://.import/Supermarket.fbx-c699990a5377d98ca51d4b242f372718.scn" ]
 
 [params]
 

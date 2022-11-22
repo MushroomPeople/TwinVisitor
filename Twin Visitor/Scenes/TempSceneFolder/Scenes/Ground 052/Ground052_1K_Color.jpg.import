@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Ground052_1K_Color.jpg-d5a364f6368b4b05439cf3f74255ce8d.s3tc.stex"
-path.etc2="res://.import/Ground052_1K_Color.jpg-d5a364f6368b4b05439cf3f74255ce8d.etc2.stex"
+path.s3tc="res://.import/Ground052_1K_Color.jpg-bee4aef6e2db704a3af2984ffb03c64e.s3tc.stex"
+path.etc2="res://.import/Ground052_1K_Color.jpg-bee4aef6e2db704a3af2984ffb03c64e.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ground 052/Ground052_1K_Color.jpg"
-dest_files=[ "res://.import/Ground052_1K_Color.jpg-d5a364f6368b4b05439cf3f74255ce8d.s3tc.stex", "res://.import/Ground052_1K_Color.jpg-d5a364f6368b4b05439cf3f74255ce8d.etc2.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Ground 052/Ground052_1K_Color.jpg"
+dest_files=[ "res://.import/Ground052_1K_Color.jpg-bee4aef6e2db704a3af2984ffb03c64e.s3tc.stex", "res://.import/Ground052_1K_Color.jpg-bee4aef6e2db704a3af2984ffb03c64e.etc2.stex" ]
 
 [params]
 

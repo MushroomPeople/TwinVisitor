@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hospital.fbx-c9aa43f1a40fd304fa1633c7e7214f93.scn"
+path="res://.import/Hospital.fbx-24d6d893d28f9275f25af4098ae2af93.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Hospital.fbx"
-dest_files=[ "res://.import/Hospital.fbx-c9aa43f1a40fd304fa1633c7e7214f93.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Hospital.fbx"
+dest_files=[ "res://.import/Hospital.fbx-24d6d893d28f9275f25af4098ae2af93.scn" ]
 
 [params]
 

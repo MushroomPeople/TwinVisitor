@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground052_1K_Roughness.jpg-45b6433ce62067b9df16d8f6b07820ca.stex"
+path="res://.import/Ground052_1K_Roughness.jpg-22a8a057a934f9a9810f1a648c25cde8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground 052/Ground052_1K_Roughness.jpg"
-dest_files=[ "res://.import/Ground052_1K_Roughness.jpg-45b6433ce62067b9df16d8f6b07820ca.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Ground 052/Ground052_1K_Roughness.jpg"
+dest_files=[ "res://.import/Ground052_1K_Roughness.jpg-22a8a057a934f9a9810f1a648c25cde8.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Bus_station.fbx-e2e1fd9b7a1750545ac30a7a0565e294.scn"
+path="res://.import/Bus_station.fbx-aa1cfb3daaf31f5b5887c9c5d28ed0bd.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Bus_station.fbx"
-dest_files=[ "res://.import/Bus_station.fbx-e2e1fd9b7a1750545ac30a7a0565e294.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Bus_station.fbx"
+dest_files=[ "res://.import/Bus_station.fbx-aa1cfb3daaf31f5b5887c9c5d28ed0bd.scn" ]
 
 [params]
 

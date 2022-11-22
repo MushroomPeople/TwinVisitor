@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground052_1K_NormalGL.jpg-f91a10d2b7788f415cdc369ffd453f46.stex"
+path="res://.import/Ground052_1K_NormalGL.jpg-ef94df27bb7b1c2d0ce3db1c4f8f2608.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground 052/Ground052_1K_NormalGL.jpg"
-dest_files=[ "res://.import/Ground052_1K_NormalGL.jpg-f91a10d2b7788f415cdc369ffd453f46.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Ground 052/Ground052_1K_NormalGL.jpg"
+dest_files=[ "res://.import/Ground052_1K_NormalGL.jpg-ef94df27bb7b1c2d0ce3db1c4f8f2608.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Bakery.fbx-2788b514fc5f54a1b7abb385a31ab136.scn"
+path="res://.import/Bakery.fbx-950ad49942d0f8704be44bcc143210f1.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Bakery.fbx"
-dest_files=[ "res://.import/Bakery.fbx-2788b514fc5f54a1b7abb385a31ab136.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Bakery.fbx"
+dest_files=[ "res://.import/Bakery.fbx-950ad49942d0f8704be44bcc143210f1.scn" ]
 
 [params]
 

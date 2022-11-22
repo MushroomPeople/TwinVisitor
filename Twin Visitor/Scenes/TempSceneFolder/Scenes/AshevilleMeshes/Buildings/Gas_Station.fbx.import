@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Gas_Station.fbx-059143ede5208656daabd5c4455c5c3a.scn"
+path="res://.import/Gas_Station.fbx-ee4057e3dff1664365a889b48ff681c6.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Gas_Station.fbx"
-dest_files=[ "res://.import/Gas_Station.fbx-059143ede5208656daabd5c4455c5c3a.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Gas_Station.fbx"
+dest_files=[ "res://.import/Gas_Station.fbx-ee4057e3dff1664365a889b48ff681c6.scn" ]
 
 [params]
 

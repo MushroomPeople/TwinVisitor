@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Bank.fbx-063ca9c20b806f6b2b2fc7b56496c246.scn"
+path="res://.import/Bank.fbx-9acbd7b42122668b147ecb7e5f305732.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Bank.fbx"
-dest_files=[ "res://.import/Bank.fbx-063ca9c20b806f6b2b2fc7b56496c246.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Bank.fbx"
+dest_files=[ "res://.import/Bank.fbx-9acbd7b42122668b147ecb7e5f305732.scn" ]
 
 [params]
 

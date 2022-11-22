@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/MeatShop.fbx-7530b74cdc2474ab2dcd028c211d48eb.scn"
+path="res://.import/MeatShop.fbx-9c2d893d3086328fff3737d78bb2d669.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/MeatShop.fbx"
-dest_files=[ "res://.import/MeatShop.fbx-7530b74cdc2474ab2dcd028c211d48eb.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/MeatShop.fbx"
+dest_files=[ "res://.import/MeatShop.fbx-9c2d893d3086328fff3737d78bb2d669.scn" ]
 
 [params]
 

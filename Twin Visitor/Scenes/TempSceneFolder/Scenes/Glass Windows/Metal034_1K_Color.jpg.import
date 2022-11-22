@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Metal034_1K_Color.jpg-7d433abf7d9dcbcc5089c40f24402cef.s3tc.stex"
-path.etc2="res://.import/Metal034_1K_Color.jpg-7d433abf7d9dcbcc5089c40f24402cef.etc2.stex"
+path.s3tc="res://.import/Metal034_1K_Color.jpg-146f86df8795e96a0f50fd267d1c9d4b.s3tc.stex"
+path.etc2="res://.import/Metal034_1K_Color.jpg-146f86df8795e96a0f50fd267d1c9d4b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Glass Windows/Metal034_1K_Color.jpg"
-dest_files=[ "res://.import/Metal034_1K_Color.jpg-7d433abf7d9dcbcc5089c40f24402cef.s3tc.stex", "res://.import/Metal034_1K_Color.jpg-7d433abf7d9dcbcc5089c40f24402cef.etc2.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Glass Windows/Metal034_1K_Color.jpg"
+dest_files=[ "res://.import/Metal034_1K_Color.jpg-146f86df8795e96a0f50fd267d1c9d4b.s3tc.stex", "res://.import/Metal034_1K_Color.jpg-146f86df8795e96a0f50fd267d1c9d4b.etc2.stex" ]
 
 [params]
 

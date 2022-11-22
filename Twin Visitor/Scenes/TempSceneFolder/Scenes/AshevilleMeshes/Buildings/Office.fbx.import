@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Office.fbx-21f943675ae4cce3924ba193e54e0e9f.scn"
+path="res://.import/Office.fbx-b63c1099c3a4e1c74c967bfa7acae61d.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Office.fbx"
-dest_files=[ "res://.import/Office.fbx-21f943675ae4cce3924ba193e54e0e9f.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Office.fbx"
+dest_files=[ "res://.import/Office.fbx-b63c1099c3a4e1c74c967bfa7acae61d.scn" ]
 
 [params]
 

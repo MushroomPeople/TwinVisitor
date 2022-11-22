@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Ground052_1K_NormalDX.jpg-129541ce2de3bbcfd4cae965cf9c0b40.s3tc.stex"
-path.etc2="res://.import/Ground052_1K_NormalDX.jpg-129541ce2de3bbcfd4cae965cf9c0b40.etc2.stex"
+path.s3tc="res://.import/Ground052_1K_NormalDX.jpg-ed9e8ca8cf3c3d36d6a5488048259563.s3tc.stex"
+path.etc2="res://.import/Ground052_1K_NormalDX.jpg-ed9e8ca8cf3c3d36d6a5488048259563.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ground 052/Ground052_1K_NormalDX.jpg"
-dest_files=[ "res://.import/Ground052_1K_NormalDX.jpg-129541ce2de3bbcfd4cae965cf9c0b40.s3tc.stex", "res://.import/Ground052_1K_NormalDX.jpg-129541ce2de3bbcfd4cae965cf9c0b40.etc2.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Ground 052/Ground052_1K_NormalDX.jpg"
+dest_files=[ "res://.import/Ground052_1K_NormalDX.jpg-ed9e8ca8cf3c3d36d6a5488048259563.s3tc.stex", "res://.import/Ground052_1K_NormalDX.jpg-ed9e8ca8cf3c3d36d6a5488048259563.etc2.stex" ]
 
 [params]
 

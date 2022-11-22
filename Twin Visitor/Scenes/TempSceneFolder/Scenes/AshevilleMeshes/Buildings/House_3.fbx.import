@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/House_3.fbx-a8a2cba5e3197fb5727c1631f5fd8a5f.scn"
+path="res://.import/House_3.fbx-e49be4bac3f6e0e96c39f9000a305470.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/House_3.fbx"
-dest_files=[ "res://.import/House_3.fbx-a8a2cba5e3197fb5727c1631f5fd8a5f.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/House_3.fbx"
+dest_files=[ "res://.import/House_3.fbx-e49be4bac3f6e0e96c39f9000a305470.scn" ]
 
 [params]
 

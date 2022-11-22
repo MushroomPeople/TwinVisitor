@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/currentmodels.glb-9474da2bc7656c963a1be3fff67bb4ad.scn"
+path="res://.import/currentmodels.glb-1cfa02f19e7e3e1268028d6e20ad86ad.scn"
 
 [deps]
 
-source_file="res://currentmodels.glb"
-dest_files=[ "res://.import/currentmodels.glb-9474da2bc7656c963a1be3fff67bb4ad.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/currentmodels.glb"
+dest_files=[ "res://.import/currentmodels.glb-1cfa02f19e7e3e1268028d6e20ad86ad.scn" ]
 
 [params]
 

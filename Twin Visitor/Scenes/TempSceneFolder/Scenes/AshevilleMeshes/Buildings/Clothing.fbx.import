@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Clothing.fbx-e94948d122d9945b40cb6a346703923c.scn"
+path="res://.import/Clothing.fbx-3715bd7dff13661e286804044db6855c.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Clothing.fbx"
-dest_files=[ "res://.import/Clothing.fbx-e94948d122d9945b40cb6a346703923c.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Clothing.fbx"
+dest_files=[ "res://.import/Clothing.fbx-3715bd7dff13661e286804044db6855c.scn" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Road003_1K_Color.jpg-8eaf52b884350f74842dc0c6c24fcd3e.s3tc.stex"
-path.etc2="res://.import/Road003_1K_Color.jpg-8eaf52b884350f74842dc0c6c24fcd3e.etc2.stex"
+path.s3tc="res://.import/Road003_1K_Color.jpg-38ff0f7f94b262c6bd03ba73d7d051cd.s3tc.stex"
+path.etc2="res://.import/Road003_1K_Color.jpg-38ff0f7f94b262c6bd03ba73d7d051cd.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Road/Road003_1K_Color.jpg"
-dest_files=[ "res://.import/Road003_1K_Color.jpg-8eaf52b884350f74842dc0c6c24fcd3e.s3tc.stex", "res://.import/Road003_1K_Color.jpg-8eaf52b884350f74842dc0c6c24fcd3e.etc2.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Road/Road003_1K_Color.jpg"
+dest_files=[ "res://.import/Road003_1K_Color.jpg-38ff0f7f94b262c6bd03ba73d7d051cd.s3tc.stex", "res://.import/Road003_1K_Color.jpg-38ff0f7f94b262c6bd03ba73d7d051cd.etc2.stex" ]
 
 [params]
 

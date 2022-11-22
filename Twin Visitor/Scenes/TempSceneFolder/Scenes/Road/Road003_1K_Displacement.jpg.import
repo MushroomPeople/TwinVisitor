@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Road003_1K_Displacement.jpg-ac3f0ae9100fd502fa332924f478e6ef.stex"
+path="res://.import/Road003_1K_Displacement.jpg-6c1b3dc6b05a6ad3f852f2f044de9278.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Road/Road003_1K_Displacement.jpg"
-dest_files=[ "res://.import/Road003_1K_Displacement.jpg-ac3f0ae9100fd502fa332924f478e6ef.stex" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/Road/Road003_1K_Displacement.jpg"
+dest_files=[ "res://.import/Road003_1K_Displacement.jpg-6c1b3dc6b05a6ad3f852f2f044de9278.stex" ]
 
 [params]
 

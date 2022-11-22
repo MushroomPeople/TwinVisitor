@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Gazebo.fbx-57878340a66d9945bcff815f0e086f1e.scn"
+path="res://.import/Gazebo.fbx-df6f0f03577f8b9edd02f9e1c62e39be.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/Gazebo.fbx"
-dest_files=[ "res://.import/Gazebo.fbx-57878340a66d9945bcff815f0e086f1e.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/Gazebo.fbx"
+dest_files=[ "res://.import/Gazebo.fbx-df6f0f03577f8b9edd02f9e1c62e39be.scn" ]
 
 [params]
 

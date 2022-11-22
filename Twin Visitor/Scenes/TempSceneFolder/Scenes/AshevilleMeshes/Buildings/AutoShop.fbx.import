@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/AutoShop.fbx-dcee1dd9725847dec1844da0cfe7ecf1.scn"
+path="res://.import/AutoShop.fbx-a3b2ff77f68a47c474245ef5a56633ea.scn"
 
 [deps]
 
-source_file="res://AshevilleMeshes/Buildings/AutoShop.fbx"
-dest_files=[ "res://.import/AutoShop.fbx-dcee1dd9725847dec1844da0cfe7ecf1.scn" ]
+source_file="res://Scenes/TempSceneFolder/Scenes/AshevilleMeshes/Buildings/AutoShop.fbx"
+dest_files=[ "res://.import/AutoShop.fbx-a3b2ff77f68a47c474245ef5a56633ea.scn" ]
 
 [params]
 
