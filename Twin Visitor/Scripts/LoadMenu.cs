@@ -62,6 +62,16 @@ public class LoadMenu : Control
 	
 	public void LoadGame(GameData gameData)
 	{
+		// set correct scene
+		// NOTE: this has to happen before setting player location because player position is
+		//       automatically updated to the scene-specified spawn point when scene is loaded
+		var scene = GD.Load<PackedScene>(gameData.currentScene);
+		var instance = scene.Instance();
+		
+		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
+		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
+		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
+		
 		// set player A and B transform and ensure correct player and camera is active
 		gc.playerA.GlobalTransform = DataTools.ArrayToTransform(gameData.playerATransform);
 		gc.playerB.GlobalTransform = DataTools.ArrayToTransform(gameData.playerBTransform);
@@ -70,20 +80,16 @@ public class LoadMenu : Control
 		gc.playerA.camera.Current = gc.playerA.active;
 		gc.playerB.camera.Current = gc.playerB.active;
 		gc.playtime = gameData.playtime;
+	
+		// clear player inventory in case game is loaded in the middle of a play session
+		gc.ClearInventory();
 		
 		// set player inventory
 		for (int i = 0; i < gameData.playerInventory.Length; i++)
 		{
+			
 			gc.AddItem(gameData.playerInventory[i]);
 		}
-		
-		// set correct scene
-		var scene = GD.Load<PackedScene>(gameData.currentScene);
-		var instance = scene.Instance();
-		
-		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
-		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;
-		GetNode("/root/GameControl/CurrentScene").AddChild(instance);
 	}
 
 	

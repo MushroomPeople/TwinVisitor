@@ -22,24 +22,27 @@ mesh = SubResource( 3 )
 shape = SubResource( 4 )
 
 [node name="DialogBox" type="PopupPanel" parent="."]
-margin_left = 120.0
-margin_top = 420.0
-margin_right = 900.0
-margin_bottom = 540.0
+visible = true
+anchor_left = 0.117188
+anchor_top = 0.7
+anchor_right = 0.878906
+anchor_bottom = 0.9
 rect_min_size = Vector2( 600, 120 )
 theme = ExtResource( 4 )
 popup_exclusive = true
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="DialogText" type="RichTextLabel" parent="DialogBox"]
-anchor_left = 0.027
-anchor_top = 0.195
-anchor_right = 0.968
-anchor_bottom = 0.817
-margin_left = -17.06
-margin_top = -19.4
-margin_right = 20.96
-margin_bottom = 17.96
+anchor_left = 0.025641
+anchor_top = 0.166667
+anchor_right = 0.974359
+anchor_bottom = 0.833333
 bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]

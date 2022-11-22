@@ -18,10 +18,6 @@ public class SceneInfo : Spatial
 		GetNode<GameControl>("/root/GameControl").currentSceneName = sceneName;
 		//GetNode<GameControl>("/root/GameControl").currentScene = sceneToLoad;
 		
-		// MOVE THIS TO GC MAYBE????
-		
-		// BUG : LOAD GAME PLACES PLAYERS IN STAGE SPAWNS NOW, INSTEAD OF EXACT POSITION SAVED
-		
 		if (GetNode<PlayerA>("/root/GameControl/PlayerA").active)
 		{
 			GetNode<PlayerA>("/root/GameControl/PlayerA").GlobalTransform = activeSpawn;

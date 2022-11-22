@@ -48,6 +48,13 @@ public class GameControl : Node
 	public void AddItem(string itemName)
 	{
 		inventory.Add(itemName, true);
-		GD.Print(inventory[itemName]);
+		//GD.Print(inventory[itemName]);
+	}
+	
+	
+	// Called from LoadMenu to ensure clean progress loading
+	public void ClearInventory()
+	{
+		inventory.Clear();
 	}
 }

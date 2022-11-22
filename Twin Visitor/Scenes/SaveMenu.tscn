@@ -25,60 +25,68 @@ margin_left = -88.5
 margin_top = -132.0
 margin_right = 88.5
 margin_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 24.0
-margin_right = 153.0
-margin_bottom = 272.0
+margin_right = 192.0
+margin_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 custom_constants/separation = 8
 
 [node name="SaveMenuLabel" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 129.0
-margin_bottom = 40.0
+margin_right = 192.0
+margin_bottom = 60.0
 text = "Save Game"
 align = 1
 valign = 1
 
 [node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
-margin_top = 48.0
-margin_right = 129.0
-margin_bottom = 48.0
+margin_top = 68.0
+margin_right = 192.0
+margin_bottom = 68.0
 
 [node name="File1Button" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
-margin_top = 56.0
-margin_right = 129.0
-margin_bottom = 102.0
+margin_top = 76.0
+margin_right = 192.0
+margin_bottom = 122.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="File2Button" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
-margin_top = 110.0
-margin_right = 129.0
-margin_bottom = 156.0
+margin_top = 130.0
+margin_right = 192.0
+margin_bottom = 176.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="File3Button" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
-margin_top = 164.0
-margin_right = 129.0
-margin_bottom = 210.0
+margin_top = 184.0
+margin_right = 192.0
+margin_bottom = 230.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
-margin_top = 218.0
-margin_right = 129.0
-margin_bottom = 218.0
+margin_top = 238.0
+margin_right = 192.0
+margin_bottom = 238.0
 
 [node name="ReturnButton" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
-margin_top = 226.0
-margin_right = 129.0
-margin_bottom = 272.0
+margin_top = 246.0
+margin_right = 192.0
+margin_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Return"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/File1Button" to="." method="_on_File1Button_pressed"]
