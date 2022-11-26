@@ -2,8 +2,9 @@
 
 [ext_resource path="res://Materials/gray.tres" type="Material" id=1]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Prefabs/DefaultItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Items/DefaultItem.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/SceneInfo.cs" type="Script" id=4]
+
 
 [sub_resource type="CubeMesh" id=1]
 

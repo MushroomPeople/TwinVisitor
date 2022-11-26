@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/GameControl.cs" type="Script" id=1]
 [ext_resource path="res://Prefabs/PlayerA.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Prefabs/PlayerB.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Stage1-1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/LoadMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/InventoryMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/InventoryMenu.cs" type="Script" id=9]
+[ext_resource path="res://Themes/Default.tres" type="Theme" id=10]
 
 [node name="GameControl" type="Spatial"]
 script = ExtResource( 1 )
@@ -20,6 +23,31 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4816, 1.75098, 0 )
 [node name="CurrentScene" type="Spatial" parent="."]
 
 [node name="Node" parent="CurrentScene" instance=ExtResource( 6 )]
+
+[node name="InventoryMenu" parent="." instance=ExtResource( 8 )]
+visible = false
+script = ExtResource( 9 )
+
+[node name="EquippedItem" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -100.0
+margin_bottom = 100.0
+
+[node name="Panel" type="Panel" parent="EquippedItem"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.5
+margin_top = -37.5
+margin_right = 37.5
+margin_bottom = 37.5
+theme = ExtResource( 10 )
+
+[node name="Viewport" type="Viewport" parent="EquippedItem/Panel"]
+size = Vector2( 75, 75 )
+own_world = true
 
 [node name="PauseMenu" parent="." instance=ExtResource( 4 )]
 visible = false

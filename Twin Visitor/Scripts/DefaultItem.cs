@@ -6,6 +6,7 @@ public class DefaultItem : Area
 {
 	// Create a GameControl Node to reference GC
 	public GameControl gc;
+	public InventoryMenu inventory;
 	public DialogBox dialogBox;
 	private RichTextLabel dialogText;
 	private bool given = false;
@@ -14,6 +15,7 @@ public class DefaultItem : Area
 	{
 		// Initializes the GameControl node to the root node
 		gc = GetNode<GameControl>("/root/GameControl");
+		inventory = GetNode<InventoryMenu>("/root/GameControl/InventoryMenu");
 		
 		if (gc.inventory.ContainsKey(Name))
 			// Removes the item from the scene
@@ -32,6 +34,8 @@ public class DefaultItem : Area
 			body.GetNode<CollisionShape>("InteractHitBox").Disabled = true;
 			// Calls the AddItem script in the GameControl node
 			gc.AddItem(Name);
+			// Calls the AddItem script in the Inventory node
+			inventory.AddItem(Name);
 			
 			dialogText.Visible = true;
 			given = true;
