@@ -11,7 +11,11 @@ public class MainMenu : Control
 	
 	private void _on_NewGameButton_pressed()
 	{
-		// Replace with function body.
+		var scene = GD.Load<PackedScene>("res://Scenes/Game.tscn");
+		var instance = scene.Instance();
+		
+		GetNode("/root").GetChild(0).QueueFree();
+		GetNode("/root").AddChild(instance);
 	}
 
 
