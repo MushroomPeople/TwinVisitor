@@ -1,0 +1,70 @@
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-26_16.11.07_52966.log'
+Editing project: /home/vanja/school/CS458/test/TwinVisitor/Twin Visitor (::home::vanja::school::CS458::test::TwinVisitor::Twin Visitor)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ERROR: Cannot open file 'res://.import/large_buildingA.glb-f5f008f20ce9617b01a0b61ba5110e6a.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/large_buildingB.glb-65a0dee805ccf0bb62b4e93cd64daf55.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/large_buildingC.glb-7757f826b07b32fb12511e5622ece20e.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/large_buildingD.glb-a459c94d9cfc14abf24128f0114516b0.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/large_buildingF.glb-c89e64f558d3458b675e73185587ab95.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/skyscraperF.glb-ca45e996e0ad33fb2dbe8c55c8b93ce3.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/cop1.escn-5f4f62def7eeceafac2f7614f2c4a806.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+ERROR: Cannot open file 'res://.import/coprigtest.escn-203f0d000ae5e6b38b02e8634b61af3f.scn'.
+   at: get_dependencies (core/io/resource_format_binary.cpp:984)
+WARNING: Octahedral compression cannot be used to compress a zero-length vector, please use normalized normal values or disable octahedral compression
+     at: norm_to_oct (servers/visual_server.cpp:346)
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-26_16.12.01_53152.log'
+debugger-agent: Unable to listen on 22
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-26_16.12.40_53235.log'
+debugger-agent: Unable to listen on 22
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-27_10.24.26_58473.log'
+debugger-agent: Unable to listen on 18
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-27_10.24.59_58554.log'
+debugger-agent: Unable to listen on 18
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-27_10.38.28_59029.log'
+debugger-agent: Unable to listen on 18
+Godot Engine v3.5.stable.mono.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: AMD Radeon(TM) Vega 10 Graphics (RAVEN, DRM 3.42.0, 5.15.0-52-generic, LLVM 12.0.0)
+Async. shader compilation: OFF
+/lib/x86_64-linux-gnu/libasound.so.2: undefined symbol: snd_dlpath
+ 
+Mono: Log file is: '/home/vanja/.local/share/godot/mono/mono_logs/2022-11-27_10.39.06_59113.log'
+debugger-agent: Unable to listen on 20
