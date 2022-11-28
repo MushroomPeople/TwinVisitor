@@ -9,6 +9,7 @@ public class GameControl : Node
 	public PlayerB playerB;
 	// Dictionary for storing Inventory data
 	public Dictionary<string, bool> inventory = new Dictionary<string, bool>();
+	public string equippedItem = "nothing";
 	public string currentScene = "res://Scenes/InitialScene.tscn";
 	public string currentSceneName = "default";
 	public bool interacting = false;
@@ -28,6 +29,7 @@ public class GameControl : Node
 	{
 		if (paused == false)
 			playtime += delta;
+		GD.Print(equippedItem);
 	}
 	
 	

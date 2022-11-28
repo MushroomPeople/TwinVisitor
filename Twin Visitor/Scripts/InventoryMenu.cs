@@ -5,11 +5,13 @@ public class InventoryMenu : Control
 {
 	private bool isPaused = false;
 	private GameControl gc;
+	private Label equippedItemLabel;
 	
 	public override void _Ready()
 	{
 		Visible = false;
 		gc = GetNode<GameControl>("/root/GameControl");
+		equippedItemLabel = GetNode<Label>("/root/GameControl/EquippedItem/Label");
 	}
 	
 	
@@ -56,4 +58,13 @@ public class InventoryMenu : Control
 		// Find child node with the matching itemName and make it visible
 		GetNode<Panel>("CenterContainer/VBoxContainer/GridContainer/" + newItem).Visible = true;
 	}
+	public void EquipItem(string itemName)
+	{
+		gc.equippedItem = itemName;
+		equippedItemLabel.Text = itemName;
+	}
 }
+
+
+
+
