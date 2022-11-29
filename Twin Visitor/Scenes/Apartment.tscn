@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Materials/Tiles001_1K_Color.jpg" type="Texture" id=2]
 [ext_resource path="res://Materials/Metal035_1K_Color.jpg" type="Texture" id=3]
@@ -60,7 +60,9 @@ roughness = 0.0
 [sub_resource type="SpatialMaterial" id=18]
 albedo_color = Color( 0.168627, 0.745098, 0.733333, 1 )
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="Environment" id=19]
+
+[node name="Spatial2" type="Spatial"]
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, -1.01145, 0.179068, 2.83814 )
@@ -288,3 +290,18 @@ shape = SubResource( 16 )
 [node name="MeshInstance" type="MeshInstance" parent="CeilingLight4"]
 mesh = SubResource( 17 )
 material/0 = SubResource( 18 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12.6, 0 )
+light_color = Color( 0.282353, 0.964706, 1, 1 )
+light_energy = 4.817
+spot_range = 26.796
+spot_angle = 76.38
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 19 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.83107, 0 )
+light_energy = 0.413
+omni_range = 24.549
