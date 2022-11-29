@@ -1,13 +1,17 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Models/KenneyModels/large_buildingA.glb" type="PackedScene" id=1]
-[ext_resource path="res://Materials/gray.tres" type="Material" id=2]
 [ext_resource path="res://Models/KenneyModels/large_buildingF.glb" type="PackedScene" id=3]
 [ext_resource path="res://Models/KenneyModels/large_buildingB.glb" type="PackedScene" id=4]
 [ext_resource path="res://Models/KenneyModels/large_buildingD.glb" type="PackedScene" id=5]
 [ext_resource path="res://Materials/lightGray.tres" type="Material" id=6]
 [ext_resource path="res://Prefabs/Items/DefaultItem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Environments/Stage1.tres" type="Environment" id=8]
+[ext_resource path="res://Prefabs/Lamp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Materials/sidewalk.tres" type="Material" id=10]
+[ext_resource path="res://Materials/road.tres" type="Material" id=11]
 [ext_resource path="res://Models/KenneyModels/skyscraperF.glb" type="PackedScene" id=12]
+[ext_resource path="res://Materials/green.tres" type="Material" id=13]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -57,6 +61,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground3" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 30 )
@@ -66,6 +71,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground3"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground4" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 50 )
@@ -75,6 +81,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground4"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground5" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 70 )
@@ -84,6 +91,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground5"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground6" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -40, 0, 10 )
@@ -93,6 +101,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground6"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground7" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -40, 0, 30 )
@@ -102,6 +111,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground7"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground8" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -40, 0, -10 )
@@ -111,6 +121,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground8"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground9" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -40, 0, -30 )
@@ -120,6 +131,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground9"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground10" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -40, 0, -50 )
@@ -129,6 +141,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground10"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground11" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, -10 )
@@ -138,6 +151,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground11"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground12" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, -30 )
@@ -147,6 +161,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground12"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground13" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, -50 )
@@ -156,6 +171,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground13"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground14" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, -70 )
@@ -165,6 +181,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground14"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground15" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, -70 )
@@ -174,6 +191,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground15"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground16" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, -50 )
@@ -183,6 +201,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground16"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground17" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, -30 )
@@ -192,6 +211,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground17"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground18" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, -10 )
@@ -201,6 +221,17 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground18"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
+
+[node name="Ground27" type="StaticBody" parent="."]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 40, 0, -10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground27"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground27"]
+mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground19" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, 10 )
@@ -210,6 +241,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground19"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground20" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, 30 )
@@ -219,6 +251,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground20"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground21" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, 50 )
@@ -228,6 +261,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground21"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground22" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 20, 0, 70 )
@@ -237,6 +271,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground22"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground23" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 20, 0, 169.492 )
@@ -246,6 +281,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground23"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground24" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, -20, 0, 169.492 )
@@ -255,6 +291,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground24"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground25" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 20, 0, -178.438 )
@@ -264,6 +301,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground25"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Ground26" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, -20, 0, -178.438 )
@@ -273,6 +311,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground26"]
 mesh = SubResource( 2 )
+material/0 = ExtResource( 10 )
 
 [node name="Road" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 0 )
@@ -281,8 +320,8 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road"]
-material_override = ExtResource( 2 )
 mesh = SubResource( 2 )
+material/0 = ExtResource( 11 )
 
 [node name="Road6" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 20 )
@@ -291,8 +330,10 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 20 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road6"]
-material_override = ExtResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
+material/0 = ExtResource( 13 )
 
 [node name="Road7" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 40 )
@@ -301,8 +342,10 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 40 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road7"]
-material_override = ExtResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
+material/0 = ExtResource( 11 )
 
 [node name="Road8" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 60 )
@@ -311,8 +354,10 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 60 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road8"]
-material_override = ExtResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
+material/0 = ExtResource( 11 )
 
 [node name="Road9" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 167.736 )
@@ -321,7 +366,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 167.736 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road9"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road2" type="StaticBody" parent="."]
@@ -331,7 +376,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -20 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road2"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road3" type="StaticBody" parent="."]
@@ -341,7 +386,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -40 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road3"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road4" type="StaticBody" parent="."]
@@ -351,7 +396,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -60 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road4"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road5" type="StaticBody" parent="."]
@@ -361,7 +406,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, -169.831 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road5"]
-material_override = ExtResource( 2 )
+material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="BuildingRow1" type="StaticBody" parent="."]
@@ -1396,6 +1441,108 @@ transform = Transform( 20.2919, 0, 0, 0, 20.2919, 0, 0, 0, 1.13749, 0, 0, -67.76
 [node name="CollisionShape" type="CollisionShape" parent="InvisibleWallSouthStreet"]
 shape = SubResource( 17 )
 
+[node name="Lamp" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -28.6568 )
+
+[node name="Lamp2" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -58.6568 )
+
+[node name="Lamp3" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -88.6568 )
+
+[node name="Lamp4" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -118.657 )
+
+[node name="Lamp5" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -148.657 )
+
+[node name="Lamp6" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -178.657 )
+
+[node name="Lamp7" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -208.657 )
+
+[node name="Lamp8" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, -238.657 )
+
+[node name="Lamp9" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 250.27 )
+
+[node name="Lamp10" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 220.27 )
+
+[node name="Lamp11" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 190.27 )
+
+[node name="Lamp12" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 160.27 )
+
+[node name="Lamp13" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 130.27 )
+
+[node name="Lamp14" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 100.27 )
+
+[node name="Lamp15" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 70.2698 )
+
+[node name="Lamp16" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 40.2698 )
+
+[node name="Lamp17" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 1.177, 10.2698 )
+
+[node name="Lamp18" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2596, 1.177, 10.6241 )
+
+[node name="Lamp19" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2476, 1.177, 40.624 )
+
+[node name="Lamp20" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2356, 1.177, 70.624 )
+
+[node name="Lamp21" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2235, 1.177, 100.624 )
+
+[node name="Lamp22" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2115, 1.177, 130.624 )
+
+[node name="Lamp23" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.1994, 1.177, 160.624 )
+
+[node name="Lamp24" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.1874, 1.177, 190.624 )
+
+[node name="Lamp25" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.1753, 1.177, 220.624 )
+
+[node name="Lamp26" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3716, 1.177, -268.303 )
+
+[node name="Lamp27" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3596, 1.177, -238.303 )
+
+[node name="Lamp28" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3475, 1.177, -208.303 )
+
+[node name="Lamp29" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3355, 1.177, -178.303 )
+
+[node name="Lamp30" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3234, 1.177, -148.303 )
+
+[node name="Lamp31" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.3114, 1.177, -118.303 )
+
+[node name="Lamp32" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2994, 1.177, -88.3026 )
+
+[node name="Lamp33" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2873, 1.177, -58.3026 )
+
+[node name="Lamp34" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2753, 1.177, -28.3026 )
+
 [node name="Item" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8174, 2.07395, 0.231848 )
 
@@ -1407,3 +1554,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5929, 2.07395, 10.5085 )
 
 [node name="Item4" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3634, 2.07395, -24.3302 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 8 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0971864, -0.718617, 0.688581, -0.285538, 0.682904, 0.672391, -0.953427, -0.131269, -0.271561, 0, 5.75905, 0 )
+light_color = Color( 0, 0.219608, 0.243137, 1 )
+light_energy = 1.381
+shadow_enabled = true
+shadow_color = Color( 1, 0, 0.890196, 1 )
