@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Models/KenneyModels/large_buildingA.glb" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Models/KenneyModels/large_buildingF.glb" type="PackedScene" id=3]
 [ext_resource path="res://Models/KenneyModels/large_buildingB.glb" type="PackedScene" id=4]
 [ext_resource path="res://Models/KenneyModels/large_buildingD.glb" type="PackedScene" id=5]
@@ -12,6 +13,10 @@
 [ext_resource path="res://Materials/road.tres" type="Material" id=11]
 [ext_resource path="res://Models/KenneyModels/skyscraperF.glb" type="PackedScene" id=12]
 [ext_resource path="res://Materials/green.tres" type="Material" id=13]
+[ext_resource path="res://Scripts/SceneInfo.cs" type="Script" id=14]
+[ext_resource path="res://Sounds/streetLevel.wav" type="AudioStream" id=15]
+[ext_resource path="res://Prefabs/cop1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/cop2.tscn" type="PackedScene" id=17]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -52,6 +57,10 @@ extents = Vector3( 0.579351, 3.92222, 0.605933 )
 [sub_resource type="BoxShape" id=17]
 
 [node name="Node" type="Spatial"]
+script = ExtResource( 14 )
+sceneName = "Streetlevel"
+scenePath = "res://Scenes/Stage1-1.tscn"
+inactiveSpawn = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 10 )
@@ -330,7 +339,6 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 20 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 13 )
@@ -342,7 +350,6 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 40 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 11 )
@@ -354,7 +361,6 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 60 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Road8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 11 )
@@ -1365,6 +1371,21 @@ shape = SubResource( 16 )
 
 [node name="skyscraperF" parent="Hospital1" instance=ExtResource( 12 )]
 
+[node name="LoadScene" parent="Hospital1" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 1.33227e-15, 0, 0, -4.76837e-07, -0.0758025, 0.576045 )
+sceneToLoad = "res://Scenes/Hallway.tscn"
+
+[node name="OmniLight" type="OmniLight" parent="Hospital1/LoadScene"]
+transform = Transform( 0, 0, 0, 0, 3.5034, 0, 0, 0, 0, 0, 1, 0 )
+light_color = Color( 0, 0.976471, 1, 1 )
+light_energy = 3.349
+light_specular = 0.0
+light_bake_mode = 2
+omni_range = 3.163
+
+[node name="cop1" parent="Hospital1/LoadScene/OmniLight" instance=ExtResource( 16 )]
+transform = Transform( 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, -2.31478, 0 )
+
 [node name="Hospital2" type="StaticBody" parent="."]
 transform = Transform( -5.4522e-07, 0, 12.4732, 0, 17.517, 0, -12.4732, 0, -5.4522e-07, -58.5756, -7.44204, 7.79853 )
 
@@ -1564,3 +1585,14 @@ light_color = Color( 0, 0.219608, 0.243137, 1 )
 light_energy = 1.381
 shadow_enabled = true
 shadow_color = Color( 1, 0, 0.890196, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -10.0
+autoplay = true
+
+[node name="cop1" parent="." instance=ExtResource( 16 )]
+transform = Transform( -0.390613, 0, 0.312124, 0, 0.5, 0, -0.312124, 0, -0.390613, -32.7708, 1.00001, 3.58408 )
+
+[node name="cop2" parent="." instance=ExtResource( 17 )]
+transform = Transform( -0.100505, 0, 0.489795, 0, 0.5, 0, -0.489795, 0, -0.100505, -35.6641, 1.00057, 2.32308 )

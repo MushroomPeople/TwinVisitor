@@ -87,7 +87,6 @@ public class LoadMenu : Control
 		// set player inventory
 		for (int i = 0; i < gameData.playerInventory.Length; i++)
 		{
-			
 			gc.AddItem(gameData.playerInventory[i]);
 		}
 	}
