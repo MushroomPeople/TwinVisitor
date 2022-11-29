@@ -60,7 +60,8 @@ extents = Vector3( 0.579351, 3.92222, 0.605933 )
 script = ExtResource( 14 )
 sceneName = "Streetlevel"
 scenePath = "res://Scenes/Stage1-1.tscn"
-inactiveSpawn = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0 )
+activeSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1, -10 )
+inactiveSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1, -5 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 10 )
@@ -1383,9 +1384,6 @@ light_specular = 0.0
 light_bake_mode = 2
 omni_range = 3.163
 
-[node name="cop1" parent="Hospital1/LoadScene/OmniLight" instance=ExtResource( 16 )]
-transform = Transform( 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, -2.31478, 0 )
-
 [node name="Hospital2" type="StaticBody" parent="."]
 transform = Transform( -5.4522e-07, 0, 12.4732, 0, 17.517, 0, -12.4732, 0, -5.4522e-07, -58.5756, -7.44204, 7.79853 )
 
@@ -1592,7 +1590,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="cop1" parent="." instance=ExtResource( 16 )]
-transform = Transform( -0.390613, 0, 0.312124, 0, 0.5, 0, -0.312124, 0, -0.390613, -32.7708, 1.00001, 3.58408 )
+transform = Transform( -0.468736, 0, 0.374549, 0, 0.6, 0, -0.374549, 0, -0.468736, -32.7708, 1.00001, 3.58408 )
 
 [node name="cop2" parent="." instance=ExtResource( 17 )]
-transform = Transform( -0.100505, 0, 0.489795, 0, 0.5, 0, -0.489795, 0, -0.100505, -35.6641, 1.00057, 2.32308 )
+transform = Transform( -0.120606, 0, 0.587754, 0, 0.6, 0, -0.587754, 0, -0.120606, -35.6641, 1.00057, 2.32308 )
