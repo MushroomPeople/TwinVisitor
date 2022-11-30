@@ -7,12 +7,14 @@ public class InteractableNPC : Area
 	private RichTextLabel dialogText;
 	public DialogBox dialogBox;
 	private GameControl gc;
+	private AudioStreamPlayer asp;
 	
 	public override void _Ready()
 	{
 		dialogBox = GetNode<DialogBox>("DialogBox");
 		dialogText = GetNode<RichTextLabel>("DialogBox/DialogText");
 		gc = GetNode<GameControl>("/root/GameControl");
+		asp = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 	}
 
 	private void _on_Item_body_entered(Node body)
@@ -22,6 +24,7 @@ public class InteractableNPC : Area
 		{
 			if (dialogBox.Visible == false)
 				dialogBox.Visible = true;
+			asp.Play();
 			dialogBox.Call("AdvanceDialogue");
 		}
 		else

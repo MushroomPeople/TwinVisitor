@@ -1,9 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=2]
-
-[sub_resource type="BitmapFont" id=3]
-height = 24.0
-
-[resource]
-/colors/test3 = Color( 0.870588, 0.870588, 0.870588, 1 )
-/constants/test2 = 36
-/fonts/test = SubResource( 3 )

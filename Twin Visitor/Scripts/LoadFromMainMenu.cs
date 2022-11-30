@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Text.Json;
 
-public class LoadMenu : Control
+public class LoadFromMainMenu : Control
 {
 	private Button file1Button;
 	private Button file2Button;
@@ -14,9 +14,7 @@ public class LoadMenu : Control
 	
 	public override void _Ready()
 	{
-		Visible = false;
-		gc = GetNode<GameControl>("/root/GameControl");
-		inventory = GetNode<InventoryMenu>("/root/GameControl/InventoryMenu");
+		//Visible = false;
 		SetButtons();
 	}
 	
@@ -57,8 +55,9 @@ public class LoadMenu : Control
 	
 	private void _on_ReturnButton_pressed()
 	{
-		GetNode<PauseMenu>("/root/GameControl/PauseMenu").Visible = true;
+		GetNode<PauseMenu>("/root/MainMenu").Visible = true;
 		Visible = false;
+		SetButtons();
 	}
 	
 	
@@ -67,8 +66,17 @@ public class LoadMenu : Control
 		// set correct scene
 		// NOTE: this has to happen before setting player location because player position is
 		//       automatically updated to the scene-specified spawn point when scene is loaded
-		var scene = GD.Load<PackedScene>(gameData.currentScene);
+		var scene = GD.Load<PackedScene>("res://Scenes/Game.tscn");
 		var instance = scene.Instance();
+		
+		GetNode("/root").GetChild(0).QueueFree();
+		GetNode("/root").AddChild(instance);
+		
+		gc = GetNode<GameControl>("/root/GameControl");
+		inventory = GetNode<InventoryMenu>("/root/GameControl/InventoryMenu");
+		
+		scene = GD.Load<PackedScene>(gameData.currentScene);
+		instance = scene.Instance();
 		
 		GetNode("/root/GameControl/CurrentScene").GetChild(0).QueueFree();
 		GetNode<GameControl>("/root/GameControl").currentScene = gameData.currentScene;

@@ -21,7 +21,8 @@ public class MainMenu : Control
 
 	private void _on_LoadGameButton_pressed()
 	{
-		// Replace with function body.
+		Visible = false;
+		GetNode<LoadFromMainMenu>("LoadFromMainMenu").Visible = true;
 	}
 
 

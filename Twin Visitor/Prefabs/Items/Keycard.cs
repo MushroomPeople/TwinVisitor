@@ -11,12 +11,14 @@ public class Keycard : Area
 	private RichTextLabel dialogText;
 	private bool given = false;
 	public bool spawn = false;
+	private AudioStreamPlayer asp;
 	
 	public override void _Ready()
 	{
 		// Initializes the GameControl node to the root node
 		gc = GetNode<GameControl>("/root/GameControl");
 		inventory = GetNode<InventoryMenu>("/root/GameControl/InventoryMenu");
+		asp = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 		
 		if (gc.inventory.ContainsKey(Name))
 			// Removes the item from the scene
@@ -31,6 +33,7 @@ public class Keycard : Area
 	{
 		if (spawn == true)
 		{
+			asp.Play();
 			GetNode<CopNPC>("../InteractableNPC").delay = true;
 			if (given == false)
 			{

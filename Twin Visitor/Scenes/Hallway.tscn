@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Materials/Tiles001_1K_Color.jpg" type="Texture" id=1]
 [ext_resource path="res://Materials/Metal032_1K_Color.jpg" type="Texture" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://Sounds/hallway.wav" type="AudioStream" id=9]
 [ext_resource path="res://Prefabs/g_npc.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/InteractableNPC.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Sounds/dialogueQueue.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/mushroomHints.wav" type="AudioStream" id=13]
+[ext_resource path="res://Scripts/LoadApartment.cs" type="Script" id=14]
+[ext_resource path="res://Sounds/Alarm.wav" type="AudioStream" id=15]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.82266, 1, 1 )
@@ -611,6 +615,7 @@ material/0 = SubResource( 11 )
 
 [node name="LoadScene" parent="Door4" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 0, -0.174955, -0.0758023, -0.501438 )
+script = ExtResource( 14 )
 sceneToLoad = "res://Scenes/Apartment.tscn"
 necessaryItem = "Keycard"
 
@@ -621,6 +626,16 @@ light_energy = 3.349
 light_specular = 0.0
 light_bake_mode = 2
 omni_range = 3.163
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Door4/LoadScene"]
+stream = ExtResource( 13 )
+volume_db = -4.0
+pitch_scale = 2.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Door4/LoadScene"]
+stream = ExtResource( 15 )
+volume_db = -4.0
+pitch_scale = 4.0
 
 [node name="DoorKnob4" type="StaticBody" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 8.23482, 3.55891, 19.5001 )
@@ -1646,7 +1661,7 @@ fit_content_height = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -10.0
+volume_db = -4.0
 autoplay = true
 
 [node name="G_npc" parent="." instance=ExtResource( 10 )]
@@ -1657,5 +1672,9 @@ transform = Transform( 1.4323, 0, -1.14292, 0, 3.06337, 0, 1.75293, 0, 0.93387, 
 
 [node name="DialogBox" parent="InteractableNPC" index="2"]
 dialogue = PoolStringArray( "Blair: Hey. Cool hat, know anything about that Plaz guy\?", "G: Thanks. Well I just know that he works at Black Cube, apparently he\'s some hotshot programmer.", "Blair: He\'s gone missing, any idea why\?", "G: The gossip around the place was that he was working on some top secret tech.", "G: We would rarely ever see him come and go. Can\'t even remember the last time I saw him.", "Blair: Right... That\'s going to make it trickey to get an exact time he went missing then.", "G: If I had to guess, he was sticking his nose where he shouldn\'t be and someone made him disappear.", "Blair: Really\? What makes you say that\? Did you see anything suspicious\?", "G: Call it a hunch.", "Blair: Excuse me\?", "G: You know, a hunch.", "G: Guy goes missing, couple of detectives drop by...", "G: It only makes sense that this is some sort of murder mystery.", "Blair: O..Okay... Well, I\'m going to get to work now, thank you.", "G: Any time." )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InteractableNPC"]
+stream = ExtResource( 12 )
+volume_db = -16.0
 
 [editable path="InteractableNPC"]
