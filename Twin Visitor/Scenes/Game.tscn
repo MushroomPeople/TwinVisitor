@@ -25,6 +25,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4816, 1.75098, 0 )
 
 [node name="InventoryMenu" parent="." instance=ExtResource( 8 )]
 pause_mode = 2
+unique_name_in_owner = true
 visible = false
 
 [node name="EquippedItem" type="Control" parent="."]
@@ -38,12 +39,15 @@ theme = ExtResource( 10 )
 align = 2
 
 [node name="PauseMenu" parent="." instance=ExtResource( 4 )]
+unique_name_in_owner = true
 visible = false
 
 [node name="SaveMenu" parent="." instance=ExtResource( 3 )]
 pause_mode = 2
+unique_name_in_owner = true
 visible = false
 
 [node name="LoadMenu" parent="." instance=ExtResource( 7 )]
 pause_mode = 2
+unique_name_in_owner = true
 visible = false

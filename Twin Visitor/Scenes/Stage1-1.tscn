@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Models/KenneyModels/large_buildingA.glb" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Models/KenneyModels/large_buildingB.glb" type="PackedScene" id=4]
 [ext_resource path="res://Models/KenneyModels/large_buildingD.glb" type="PackedScene" id=5]
 [ext_resource path="res://Materials/lightGray.tres" type="Material" id=6]
-[ext_resource path="res://Prefabs/Items/DefaultItem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Items/Keycard.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Environments/Stage1.tres" type="Environment" id=8]
 [ext_resource path="res://Prefabs/Lamp.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Materials/sidewalk.tres" type="Material" id=10]
@@ -17,6 +17,10 @@
 [ext_resource path="res://Sounds/streetLevel.wav" type="AudioStream" id=15]
 [ext_resource path="res://Prefabs/cop1.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/cop2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Themes/Default.tres" type="Theme" id=18]
+[ext_resource path="res://Prefabs/InteractableNPC.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/CopNPC.cs" type="Script" id=20]
+[ext_resource path="res://Prefabs/Items/Keycard.cs" type="Script" id=21]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -60,8 +64,8 @@ extents = Vector3( 0.579351, 3.92222, 0.605933 )
 script = ExtResource( 14 )
 sceneName = "Streetlevel"
 scenePath = "res://Scenes/Stage1-1.tscn"
-activeSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1, -10 )
-inactiveSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1, -5 )
+activeSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1.179, -10 )
+inactiveSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1.179, -5 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 10 )
@@ -324,7 +328,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 10 )
 
 [node name="Road" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 0 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road"]
 shape = SubResource( 1 )
@@ -334,7 +338,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 11 )
 
 [node name="Road6" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 20 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, 20 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road6"]
 shape = SubResource( 1 )
@@ -345,7 +349,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 13 )
 
 [node name="Road7" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 40 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, 40 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road7"]
 shape = SubResource( 1 )
@@ -356,7 +360,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 11 )
 
 [node name="Road8" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, 60 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, 60 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road8"]
 shape = SubResource( 1 )
@@ -367,7 +371,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 11 )
 
 [node name="Road9" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 167.736 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -0.49666, 167.736 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road9"]
 shape = SubResource( 1 )
@@ -377,7 +381,7 @@ material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road2" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -20 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, -20 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road2"]
 shape = SubResource( 1 )
@@ -387,7 +391,7 @@ material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road3" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -40 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, -40 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road3"]
 shape = SubResource( 1 )
@@ -397,7 +401,7 @@ material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road4" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1, -60 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.49666, -60 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road4"]
 shape = SubResource( 1 )
@@ -407,7 +411,7 @@ material_override = ExtResource( 11 )
 mesh = SubResource( 2 )
 
 [node name="Road5" type="StaticBody" parent="."]
-transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, -169.831 )
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 100, 0, -0.49666, -169.831 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Road5"]
 shape = SubResource( 1 )
@@ -1562,18 +1566,6 @@ transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2873
 [node name="Lamp34" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2753, 1.177, -28.3026 )
 
-[node name="Item" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8174, 2.07395, 0.231848 )
-
-[node name="Item2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9868, 2.07395, -11.5975 )
-
-[node name="Item3" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5929, 2.07395, 10.5085 )
-
-[node name="Item4" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3634, 2.07395, -24.3302 )
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 8 )
 
@@ -1586,11 +1578,38 @@ shadow_color = Color( 1, 0, 0.890196, 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -10.0
+volume_db = -12.0
 autoplay = true
 
 [node name="cop1" parent="." instance=ExtResource( 16 )]
+unique_name_in_owner = true
 transform = Transform( -0.468736, 0, 0.374549, 0, 0.6, 0, -0.374549, 0, -0.468736, -32.7708, 1.00001, 3.58408 )
 
 [node name="cop2" parent="." instance=ExtResource( 17 )]
-transform = Transform( -0.120606, 0, 0.587754, 0, 0.6, 0, -0.587754, 0, -0.120606, -35.6641, 1.00057, 2.32308 )
+transform = Transform( -0.358634, 0, 0.481022, 0, 0.6, 0, -0.481022, 0, -0.358634, -35.6641, 1.00057, 2.32308 )
+
+[node name="SceneName" type="RichTextLabel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 26.0
+margin_top = -61.0
+margin_right = 159.0
+margin_bottom = -20.0
+theme = ExtResource( 18 )
+text = "Streetlevel"
+fit_content_height = true
+
+[node name="InteractableNPC" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 2.85986, 0, 0, 0, 1, -32.8798, 2.4002, 3.80831 )
+script = ExtResource( 20 )
+
+[node name="DialogBox" parent="InteractableNPC" index="2"]
+dialogue = PoolStringArray( "Dade: What can you tell me\?", "Cop: Metal hand\? Ex-cop then, well I\'ll cut to the chase. Encrypted terminal.", "Cop: Some strange things, maybe they will tell you what\'s goin\' on.", "Dade: Thanks. Got the key to the place\?", "Cop: Right, here it is." )
+
+[node name="Keycard" parent="." instance=ExtResource( 7 )]
+unique_name_in_owner = true
+transform = Transform( 4.77488, 0, 0, 0, 2.56717, 0, 0, 0, 5.38749, -33.5239, 2.23817, 2.80071 )
+script = ExtResource( 21 )
+
+[editable path="InteractableNPC"]
+[editable path="Keycard"]

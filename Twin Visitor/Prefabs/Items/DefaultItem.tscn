@@ -9,16 +9,18 @@
 
 [sub_resource type="SphereShape" id=4]
 
-[node name="Item" type="Area"]
+[node name="Keycard" type="Area"]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
 material_override = ExtResource( 1 )
 mesh = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+visible = false
 shape = SubResource( 4 )
 
 [node name="DialogBox" type="PopupPanel" parent="."]

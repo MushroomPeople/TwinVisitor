@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/InteractableNPC.cs" type="Script" id=1]
-[ext_resource path="res://Materials/green.tres" type="Material" id=2]
+[ext_resource path="res://Materials/green.tres" type="Material" id=1]
+[ext_resource path="res://Scripts/DefaultItem.cs" type="Script" id=2]
 [ext_resource path="res://Scripts/DialogBox.cs" type="Script" id=3]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=4]
 
@@ -9,14 +9,14 @@
 
 [sub_resource type="SphereShape" id=4]
 
-[node name="InteractableNPC" type="Area"]
+[node name="Item" type="Area"]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 visible = false
-material_override = ExtResource( 2 )
+material_override = ExtResource( 1 )
 mesh = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -38,13 +38,14 @@ __meta__ = {
 }
 
 [node name="DialogText" type="RichTextLabel" parent="DialogBox"]
-anchor_left = 0.025641
-anchor_top = 0.166667
-anchor_right = 0.974359
-anchor_bottom = 0.833333
-margin_left = 3.8147e-05
-margin_top = -4.00543e-05
-margin_bottom = 3.8147e-05
+anchor_left = 0.024359
+anchor_top = 0.183333
+anchor_right = 0.973077
+anchor_bottom = 0.85
+margin_left = 0.999998
+margin_top = -1.99996
+margin_right = 0.999939
+margin_bottom = -2.0
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": true
