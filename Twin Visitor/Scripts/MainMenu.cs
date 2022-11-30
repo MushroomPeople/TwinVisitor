@@ -6,6 +6,15 @@ public class MainMenu : Control
 	public override void _Ready()
 	{
 		Visible = true;
+		var scene = GD.Load<PackedScene>("res://Scenes/Stage1-1.tscn");
+		var instance = scene.Instance();
+		instance.QueueFree();
+		scene = GD.Load<PackedScene>("res://Scenes/Hallway.tscn");
+		instance = scene.Instance();
+		instance.QueueFree();
+		scene = GD.Load<PackedScene>("res://Scenes/Apartment.tscn");
+		instance = scene.Instance();
+		instance.QueueFree();
 	}
 	
 	

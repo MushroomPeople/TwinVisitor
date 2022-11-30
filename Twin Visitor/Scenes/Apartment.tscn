@@ -77,8 +77,8 @@ font_data = ExtResource( 7 )
 script = ExtResource( 1 )
 sceneName = "Apartment"
 scenePath = "res://Scenes/Apartment.tscn"
-activeSpawn = Transform( -0.75, 0, -1.3, 0, 1.5, 0, 1.3, 0, -0.75, -11, 1.181, -7.5 )
-inactiveSpawn = Transform( 0, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1, -13, 1.181, -3 )
+activeSpawn = Transform( -0.75, 0, -1.3, 0, 1.5, 0, 1.3, 0, -0.75, -9, 1.181, -7.5 )
+inactiveSpawn = Transform( 0, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1, -11, 1.181, -3 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 15, 0, 0, 0, 1, 0, 0, 0, 15, -1.01145, 0.179068, 2.83814 )
