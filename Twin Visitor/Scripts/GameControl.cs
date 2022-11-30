@@ -10,7 +10,7 @@ public class GameControl : Node
 	// Dictionary for storing Inventory data
 	public Dictionary<string, bool> inventory = new Dictionary<string, bool>();
 	public string equippedItem = "";
-	public string currentScene = "res://Scenes/InitialScene.tscn";
+	public string currentScene = "res://ScenesStage1-1.tscn";
 	public string currentSceneName = "";
 	public bool interacting = false;
 	public float playtime = 0f;

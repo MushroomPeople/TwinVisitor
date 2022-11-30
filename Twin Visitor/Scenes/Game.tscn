@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/GameControl.cs" type="Script" id=1]
 [ext_resource path="res://Prefabs/PlayerA.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Stage1-1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/LoadMenu.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/InventoryMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Environments/Stage1.tres" type="Environment" id=9]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=10]
 
 [node name="GameControl" type="Spatial"]
@@ -51,3 +52,6 @@ visible = false
 pause_mode = 2
 unique_name_in_owner = true
 visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 9 )

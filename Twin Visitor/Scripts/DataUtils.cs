@@ -24,7 +24,7 @@ public class GameData
 		playerAActive = true;
 		playerBActive = false;
 		playerInventory = new string[0];
-		currentScene = "res://Scenes/InitialScene.tscn";
+		currentScene = "res://Scenes/Stage1-1.tscn";
 		currentSceneName = "New Game";
 		playtime = 0f;
 	}

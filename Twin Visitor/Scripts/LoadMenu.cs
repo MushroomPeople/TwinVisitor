@@ -85,6 +85,7 @@ public class LoadMenu : Control
 	
 		// clear player inventory in case game is loaded in the middle of a play session
 		gc.ClearInventory();
+		inventory.Clear();
 		
 		// set player inventory
 		for (int i = 0; i < gameData.playerInventory.Length; i++)

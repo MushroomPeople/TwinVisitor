@@ -14,7 +14,7 @@ public class LoadFromMainMenu : Control
 	
 	public override void _Ready()
 	{
-		//Visible = false;
+		Visible = false;
 		SetButtons();
 	}
 	
@@ -55,8 +55,8 @@ public class LoadFromMainMenu : Control
 	
 	private void _on_ReturnButton_pressed()
 	{
-		GetNode<PauseMenu>("/root/MainMenu").Visible = true;
 		Visible = false;
+		GetNode<MainMenu>("../MainMenu").Visible = true;
 		SetButtons();
 	}
 	

@@ -14,7 +14,6 @@ public class InventoryMenu : Control
 		equippedItemLabel = GetNode<Label>("/root/GameControl/EquippedItem/Label");
 	}
 	
-	
 	public override void _Input(InputEvent @event)
 	{
 		if (Input.IsActionJustPressed("Inventory"))
@@ -41,6 +40,7 @@ public class InventoryMenu : Control
 		// show mouse (this also uncaptures mouse)
 		Input.MouseMode = Input.MouseModeEnum.Visible;
 	}
+	
 	public void InvUnpause()
 	{
 		// unpause game
@@ -53,15 +53,22 @@ public class InventoryMenu : Control
 		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
+	
 	public void AddItem(string newItem)
 	{
 		// Find child node with the matching itemName and make it visible
 		GetNode<Panel>("CenterContainer/VBoxContainer/GridContainer/" + newItem).Visible = true;
 	}
+	
 	public void EquipItem(string itemName)
 	{
 		gc.equippedItem = itemName;
 		equippedItemLabel.Text = itemName;
+	}
+	
+	public void Clear()
+	{
+		GetNode<Panel>("CenterContainer/VBoxContainer/GridContainer/Keycard").Visible = false;
 	}
 }
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Models/KenneyModels/large_buildingA.glb" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
@@ -23,6 +23,9 @@
 [ext_resource path="res://Prefabs/Items/Keycard.cs" type="Script" id=21]
 [ext_resource path="res://Sounds/dialogueQueue.wav" type="AudioStream" id=22]
 [ext_resource path="res://Sounds/pickUp.wav" type="AudioStream" id=23]
+[ext_resource path="res://Models/V_patches.escn" type="PackedScene" id=24]
+[ext_resource path="res://Prefabs/husk.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Prefabs/mystic.tscn" type="PackedScene" id=26]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -68,6 +71,9 @@ sceneName = "Streetlevel"
 scenePath = "res://Scenes/Stage1-1.tscn"
 activeSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1.181, -10 )
 inactiveSpawn = Transform( 0, 0, 1.2, 0, 1.2, 0, -1.2, 0, 0, 14, 1.181, -5 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 8 )
 
 [node name="Ground" type="StaticBody" parent="."]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -20, 0, 10 )
@@ -1568,9 +1574,6 @@ transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2873
 [node name="Lamp34" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.000401366, 0, -1, 0, 1, 0, 1, 0, -0.000401366, 11.2753, 1.177, -28.3026 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 8 )
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.0971864, -0.718617, 0.688581, -0.285538, 0.682904, 0.672391, -0.953427, -0.131269, -0.271561, 0, 5.75905, 0 )
 light_color = Color( 0, 0.219608, 0.243137, 1 )
@@ -1612,6 +1615,26 @@ dialogue = PoolStringArray( "Dade: What can you tell me\?", "Cop: Metal hand\? E
 stream = ExtResource( 22 )
 volume_db = -16.0
 
+[node name="InteractableNPC2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1.55652, 0, 0, 0, 2.85986, 0, 0, 0, 1, -19.6159, 2.4002, -43.3017 )
+
+[node name="DialogBox" parent="InteractableNPC2" index="2"]
+dialogue = PoolStringArray( "Dade: Hey.", "Vagrant: Save it man, I don\'t talk to robo pigs.", "Dade: Right." )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InteractableNPC2"]
+stream = ExtResource( 22 )
+volume_db = -16.0
+
+[node name="InteractableNPC3" parent="." instance=ExtResource( 19 )]
+transform = Transform( 0.0176851, 0, -0.999935, 0, 2.85986, 0, 1.55642, 0, 0.0113619, -39.3516, 2.4002, -12.5088 )
+
+[node name="DialogBox" parent="InteractableNPC3" index="2"]
+dialogue = PoolStringArray( "Husk: ..." )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="InteractableNPC3"]
+stream = ExtResource( 22 )
+volume_db = -16.0
+
 [node name="Keycard" parent="." instance=ExtResource( 7 )]
 unique_name_in_owner = true
 transform = Transform( 4.77488, 0, 0, 0, 2.56717, 0, 0, 0, 5.38749, -33.5239, 2.23817, 2.80071 )
@@ -1622,5 +1645,16 @@ stream = ExtResource( 23 )
 volume_db = -16.0
 pitch_scale = 0.75
 
+[node name="V_patches" parent="." instance=ExtResource( 24 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -19.498, 1, -43.5171 )
+
+[node name="finalhusk" parent="." instance=ExtResource( 25 )]
+transform = Transform( 0.00860785, 0, 1.79998, 0, 1.8, 0, -1.79998, 0, 0.00860785, -37.1991, 0.999999, -12.5552 )
+
+[node name="mystic" parent="." instance=ExtResource( 26 )]
+transform = Transform( -0.233137, 0, 0.552854, 0, 0.6, 0, -0.552854, 0, -0.233137, -25.8492, 1, -22.7765 )
+
 [editable path="InteractableNPC"]
+[editable path="InteractableNPC2"]
+[editable path="InteractableNPC3"]
 [editable path="Keycard"]

@@ -87,7 +87,7 @@ public class PlayerA : KinematicBody
 		{
 			LookAt(playerB.GlobalTransform.origin, Vector3.Up);
 			float dist = playerB.GlobalTransform.origin.DistanceSquaredTo(GlobalTransform.origin);
-			if (dist > 25f)
+			if (dist > 20f)
 			{
 				direction -= Transform.basis.z;
 				direction = direction.Normalized();

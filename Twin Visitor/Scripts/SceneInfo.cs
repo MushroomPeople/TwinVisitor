@@ -16,7 +16,7 @@ public class SceneInfo : Spatial
 	public override void _Ready()
 	{
 		GetNode<GameControl>("/root/GameControl").currentSceneName = sceneName;
-		//GetNode<GameControl>("/root/GameControl").currentScene = sceneToLoad;
+		GetNode<GameControl>("/root/GameControl").currentScene = scenePath;
 		
 		if (GetNode<PlayerA>("/root/GameControl/PlayerA").active)
 		{

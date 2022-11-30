@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/LoadFromMainMenu.cs" type="Script" id=1]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
+[ext_resource path="res://Images/background.png" type="Texture" id=3]
 
 [node name="LoadFromMainMenu" type="Control"]
 anchor_right = 1.0
@@ -11,10 +12,26 @@ size_flags_vertical = 6
 theme = ExtResource( 2 )
 script = ExtResource( 1 )
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background2" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0627451, 0, 0.117647, 0.654902 )
+color = Color( 0, 0, 0, 0.737255 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Background3" type="Sprite" parent="."]
+position = Vector2( 518, 282 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="Background4" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.192157, 0.0588235, 0.305882, 0.737255 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.5

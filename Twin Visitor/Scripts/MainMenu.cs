@@ -22,7 +22,7 @@ public class MainMenu : Control
 	private void _on_LoadGameButton_pressed()
 	{
 		Visible = false;
-		GetNode<LoadFromMainMenu>("LoadFromMainMenu").Visible = true;
+		GetNode<LoadFromMainMenu>("../LoadFromMainMenu").Visible = true;
 	}
 
 
