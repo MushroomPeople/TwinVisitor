@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Materials/Tiles001_1K_Color.jpg" type="Texture" id=1]
 [ext_resource path="res://Materials/Metal032_1K_Color.jpg" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=8]
 [ext_resource path="res://Sounds/hallway.wav" type="AudioStream" id=9]
+[ext_resource path="res://Prefabs/g_npc.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/InteractableNPC.tscn" type="PackedScene" id=11]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.82266, 1, 1 )
@@ -428,6 +430,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 5.82077e-11, 0, 1, -10.622, 0, -0.91542
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
+[node name="LoadScene" parent="ElevatorDoor" instance=ExtResource( 7 )]
+transform = Transform( 1.8, 0, 0, 0, 1, 0, -1.16415e-10, 0, 0, -9.59033, -1.08794, -1.79062 )
+sceneToLoad = "res://Scenes/Stage1-1.tscn"
+
 [node name="ElevatorDoor2" type="StaticBody" parent="."]
 transform = Transform( -0.00047124, 0, -0.5, 0, 3, 0, 1.5, 0, -0.00015708, -20.2553, 4.15552, 10.801 )
 
@@ -516,6 +522,7 @@ material/0 = SubResource( 49 )
 transform = Transform( 2, 0, 0, 0, 3, 0, 0, 0, 0.5, -12.194, 4.15552, -0.0351915 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door"]
+transform = Transform( 1.21069, 0, 0, 0, 1, 0, 0, 0, 1, -0.17942, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door"]
@@ -571,6 +578,7 @@ material/0 = SubResource( 10 )
 transform = Transform( -0.299997, 0, 0.00135087, 0, 0.3, 0, -0.00135087, 0, -0.299997, -1.52157, 3.55891, -1.71745 )
 
 [node name="CollisionShape" type="CollisionShape" parent="DoorKnob7"]
+transform = Transform( 1, 0, 6.0536e-09, 0, 1, 0, -6.0536e-09, 0, 1, 3.34109, 3.20443, -4.07917 )
 shape = SubResource( 8 )
 
 [node name="MeshInstance" type="MeshInstance" parent="DoorKnob7"]
@@ -602,7 +610,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 11 )
 
 [node name="LoadScene" parent="Door4" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 0, -0.174955, -0.0758024, -0.501438 )
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 0, -0.174955, -0.0758023, -0.501438 )
 sceneToLoad = "res://Scenes/Apartment.tscn"
 necessaryItem = "Keycard"
 
@@ -673,6 +681,7 @@ material/0 = SubResource( 10 )
 transform = Transform( 2, 0, 0, 0, 3, 0, 0, 0, 0.5, -0.736933, 4.15552, 0.000686646 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door8"]
+transform = Transform( 1.2188, 0, 0, 0, 1, 0, 0, 0, 1, -0.186532, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door8"]
@@ -684,6 +693,7 @@ material/0 = SubResource( 11 )
 transform = Transform( -0.299997, 0, 0.00135087, 0, 0.3, 0, -0.00135087, 0, -0.299997, -12.8918, 3.55891, -1.71745 )
 
 [node name="CollisionShape" type="CollisionShape" parent="DoorKnob8"]
+transform = Transform( 1, 0, 1.02445e-08, 0, 1, 0, -1.02445e-08, 0, 1, 3.43253, 3.14944, -3.82948 )
 shape = SubResource( 8 )
 
 [node name="MeshInstance" type="MeshInstance" parent="DoorKnob8"]
@@ -1638,3 +1648,14 @@ fit_content_height = true
 stream = ExtResource( 9 )
 volume_db = -10.0
 autoplay = true
+
+[node name="G_npc" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.28322, 0, -1.53406, 0, 2, 0, 1.53406, 0, 1.28322, 13.9886, 1.17907, -11.5982 )
+
+[node name="InteractableNPC" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1.4323, 0, -1.14292, 0, 3.06337, 0, 1.75293, 0, 0.93387, 15.5748, 3.45019, -12.0518 )
+
+[node name="DialogBox" parent="InteractableNPC" index="2"]
+dialogue = PoolStringArray( "Blair: Hey. Cool hat, know anything about that Plaz guy\?", "G: Thanks. Well I just know that he works at Black Cube, apparently he\'s some hotshot programmer.", "Blair: He\'s gone missing, any idea why\?", "G: The gossip around the place was that he was working on some top secret tech.", "G: We would rarely ever see him come and go. Can\'t even remember the last time I saw him.", "Blair: Right... That\'s going to make it trickey to get an exact time he went missing then.", "G: If I had to guess, he was sticking his nose where he shouldn\'t be and someone made him disappear.", "Blair: Really\? What makes you say that\? Did you see anything suspicious\?", "G: Call it a hunch.", "Blair: Excuse me\?", "G: You know, a hunch.", "G: Guy goes missing, couple of detectives drop by...", "G: It only makes sense that this is some sort of murder mystery.", "Blair: O..Okay... Well, I\'m going to get to work now, thank you.", "G: Any time." )
+
+[editable path="InteractableNPC"]

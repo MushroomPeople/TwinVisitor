@@ -126,6 +126,7 @@ material/0 = SubResource( 6 )
 transform = Transform( -6.55671e-07, 0, 0.5, 0, 6, 0, -15, 0, -2.18557e-08, -15.4395, 6.84527, 0.142615 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Wall4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.254217 )
 shape = SubResource( 4 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Wall4"]
@@ -192,6 +193,7 @@ material/0 = SubResource( 6 )
 transform = Transform( 1.9979, 0, -0.022882, 0, 3, 0, 0.0915278, 0, 0.499476, -5.86314, 4.16582, 16.9351 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door"]
+transform = Transform( 1.23172, 0, -0.00265391, 0, 1, 0, -0.0424623, 0, 1.00049, -0.170071, 0, 0.0311661 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door"]
@@ -214,10 +216,11 @@ material/0 = SubResource( 12 )
 transform = Transform( -0.0342416, 0, -0.499927, 0, 3, 0, 1.99971, 0, -0.0085604, -15.2841, 4.16582, 8.71775 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door2"]
+transform = Transform( 1.21746, 0, -0.000930894, 0, 1, 0, -0.0148945, 0, 1.00006, -0.197739, 0, 0.0135441 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177623, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, -7.45058e-09, 0, 1, -0.177623, 0, 0 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
 
@@ -236,6 +239,7 @@ material/0 = SubResource( 12 )
 transform = Transform( -0.0342416, 0, -0.499927, 0, 3, 0, 1.99971, 0, -0.0085604, -15.2841, 4.16582, -4.23672 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Door3"]
+transform = Transform( 1.20286, 0, -0.000868424, 0, 1, 0, -0.0138949, 0, 1.00006, -0.189307, 0, 0.0129662 )
 shape = SubResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Door3"]
