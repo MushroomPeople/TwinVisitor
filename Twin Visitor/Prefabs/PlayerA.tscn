@@ -24,7 +24,8 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0572551, 0 )
 collision_layer = 2
 script = ExtResource( 4 )
-speed = 10.0
+speed = 7.0
+acceleration = 12.0
 jump_power = 10.0
 mouse_sensitivity = 0.25
 
