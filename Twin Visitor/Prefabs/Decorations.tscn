@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/Ambulance.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/MushroomClump1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Models/hatchbackSports.glb" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Bench.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Dumpster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/PoliceCar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/barrier.tscn" type="PackedScene" id=7]
+
+[node name="Decorations" type="Spatial"]
+transform = Transform( 2.60631, 0, 1.65108, 0, 3.08527, 0, -1.65108, 0, 2.60631, -31.214, 0.972246, 10.7063 )
+
+[node name="PoliceCar" type="StaticBody" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 2.98023e-08, -2.86102e-06 )
+
+[node name="PoliceCar2" type="StaticBody" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.913254, 0, 0.40739, 0, 1, 0, -0.40739, 0, 0.913254, 3.35477, 2.98023e-08, 1.47021 )
+
+[node name="Ambulance" type="StaticBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.844757, 0, -0.535148, 0, 1, 0, 0.535148, 0, 0.844757, 11.1789, -0.152234, -3.26956 )
+
+[node name="Bench" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.18666, 0, -1.07444, 0, 1.2719, 0, 1.8732, 0, -0.680652, -3.96289, 0.00917396, -3.90967 )
+
+[node name="Bench2" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.8732, 0, 0.680652, 0, 1.2719, 0, -1.18666, 0, -1.07444, -1.60651, 0.00917396, -4.48314 )
+
+[node name="Bench5" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.8732, 0, -0.680652, 0, 1.2719, 0, 1.18666, 0, 1.07444, 4.6371, 0.00931981, -0.527978 )
+
+[node name="Bench3" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.8732, 0, -0.680652, 0, 1.2719, 0, 1.18666, 0, 1.07444, 1.46925, 0.00917396, -9.33839 )
+
+[node name="Bench6" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.8732, 0, 0.680652, 0, 1.2719, 0, -1.18666, 0, -1.07444, 7.76346, 0.00931981, -5.46309 )
+
+[node name="Bench4" type="StaticBody" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.18666, 0, -1.07444, 0, 1.2719, 0, 1.8732, 0, -0.680652, 0.849968, 0.00917396, -11.5716 )
+
+[node name="MushroomClump" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.273803, 0, 0.173452, 0, 0.324121, 0, -0.173452, 0, -0.273803, 22.0584, 0.00899568, 5.14546 )
+
+[node name="MushroomClump3" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.273803, 0, 0.173452, 0, 0.324121, 0, -0.173452, 0, -0.273803, 4.06588, 0.00899568, -15.3411 )
+
+[node name="MushroomClump4" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.224084, 0, -0.23418, 0, 0.324121, 0, 0.23418, 0, -0.224084, 5.19562, 0.00899568, -17.1654 )
+
+[node name="hatchbackSports" type="Spatial" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.868655, 0, 0.615383, 0, 1.06455, 0, -0.615383, 0, -0.868655, 0.440851, -0.151982, 22.4414 )
+
+[node name="MushroomClump5" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.264478, 0, 0.187365, 0, 0.324121, 0, -0.187365, 0, -0.264478, -7.05212, 0.00899568, 0.581313 )
+
+[node name="MushroomClump2" type="Spatial" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.317881, 0, -0.0632881, 0, 0.324121, 0, 0.0632881, 0, 0.317881, 11.0043, 1.64719, -2.85034 )
+
+[node name="Barrier" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.81729, 0, -1.3386, 0, 2.25708, 0, 1.3386, 0, 1.81729, 0.67327, -0.104458, 19.2606 )
+
+[node name="Barrier2" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.78833, 0, -1.37705, 0, 2.25708, 0, 1.37705, 0, 1.78833, 2.02882, -0.104458, 20.1193 )
+
+[node name="Barrier3" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.98149, 0, -1.08079, 0, 2.25708, 0, 1.08079, 0, 1.98149, -0.578561, -0.104458, 18.4675 )
+
+[node name="Barrier4" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.84697, 0, -1.29735, 0, 2.25708, 0, 1.29735, 0, 1.84697, -1.94552, -0.104458, 17.6016 )
+
+[node name="Barrier5" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.92993, 0, -1.17037, 0, 2.25708, 0, 1.17037, 0, 1.92993, -3.61881, 0.0515106, 16.5416 )
+
+[node name="Barrier6" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.98965, 0, -1.06568, 0, 2.25708, 0, 1.06568, 0, 1.98965, 3.67601, 0.0515106, 21.1628 )
+
+[node name="Barrier7" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.81729, 0, -1.3386, 0, 2.25708, 0, 1.3386, 0, 1.81729, 22.6667, -0.104458, -15.4571 )
+
+[node name="Barrier8" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.78833, 0, -1.37705, 0, 2.25708, 0, 1.37705, 0, 1.78833, 24.0223, -0.104458, -14.5984 )
+
+[node name="Barrier9" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.98149, 0, -1.08079, 0, 2.25708, 0, 1.08079, 0, 1.98149, 21.4149, -0.104458, -16.2502 )
+
+[node name="Barrier10" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.84697, 0, -1.29735, 0, 2.25708, 0, 1.29735, 0, 1.84697, 20.0479, -0.104458, -17.1161 )
+
+[node name="Barrier11" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.781212, 0, 2.11757, 0, 2.25708, 0, -2.11757, 0, 0.781212, 8.7825, 0.0515106, -6.0085 )
+
+[node name="Barrier18" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.781212, 0, 2.11757, 0, 2.25708, 0, -2.11757, 0, 0.781212, 2.29552, 0.0515106, 3.80361 )
+
+[node name="Barrier19" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.5295, 0, 1.65983, 0, 2.25708, 0, -1.65983, 0, 1.5295, 1.43889, 0.0515106, 4.97002 )
+
+[node name="Barrier13" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.10461, 0, 1.96831, 0, 2.25708, 0, -1.96831, 0, 1.10461, 9.34429, 0.0515106, -7.34024 )
+
+[node name="Barrier14" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.767227, 0, 2.12268, 0, 2.25708, 0, -2.12268, 0, 0.767227, 9.8535, 0.0515106, -8.64832 )
+
+[node name="Barrier15" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.902825, 0, 2.06865, 0, 2.25708, 0, -2.06865, 0, 0.902825, 10.4963, 0.0515106, -9.8848 )
+
+[node name="Barrier16" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.09236, 0, 1.97513, 0, 2.25708, 0, -1.97513, 0, 1.09236, 11.1261, 0.0515106, -11.1512 )
+
+[node name="Barrier17" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.35047, 0, 1.80849, 0, 2.25708, 0, -1.80849, 0, 1.35047, 11.7139, 0.0515106, -12.3951 )
+
+[node name="Barrier12" type="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1.98965, 0, -1.06568, 0, 2.25708, 0, 1.06568, 0, 1.98965, 25.6694, 0.0515106, -13.5549 )
+
+[node name="Dumpster" type="StaticBody" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2.47401, 0, -1.56727, 0, 2.92867, 0, 1.56727, 0, 2.47401, -9.38317, 0.770216, -28.1952 )
+
+[node name="Dumpster2" type="StaticBody" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2.47401, 0, -1.56727, 0, 2.92867, 0, 1.56727, 0, 2.47401, -8.18527, 0.770216, -30.0862 )

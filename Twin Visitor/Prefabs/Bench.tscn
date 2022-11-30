@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/bench.glb" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.381405, 0.582489, 0.189962 )
+
+[node name="Bench" type="StaticBody"]
+transform = Transform( -2.99047e-07, 0, -3.92414, 0, 3.92414, 0, 6.84141, 0, -1.7153e-07, -47.9459, 1.00055, 14.2107 )
+
+[node name="bench" type="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )

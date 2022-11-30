@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Models/KenneyModels/large_buildingA.glb" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/LoadScene.tscn" type="PackedScene" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Models/V_patches.escn" type="PackedScene" id=24]
 [ext_resource path="res://Prefabs/husk.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Prefabs/mystic.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Prefabs/Decorations.tscn" type="PackedScene" id=27]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -1653,6 +1654,8 @@ transform = Transform( 0.00860785, 0, 1.79998, 0, 1.8, 0, -1.79998, 0, 0.0086078
 
 [node name="mystic" parent="." instance=ExtResource( 26 )]
 transform = Transform( -0.233137, 0, 0.552854, 0, 0.6, 0, -0.552854, 0, -0.233137, -25.8492, 1, -22.7765 )
+
+[node name="Decorations" parent="." instance=ExtResource( 27 )]
 
 [editable path="InteractableNPC"]
 [editable path="InteractableNPC2"]
